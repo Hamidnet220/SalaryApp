@@ -35,17 +35,9 @@ namespace SalaryApp.WinClient.Views.Employees
             BindTextBox(FatherNameTextBox,emp=>emp.FatherName);
             BindTextBox(NationalCodeTextBox,emp=>emp.NationalCode);
             BindTextBox(IdNumberTextBox,emp=>emp.IdNumber);
-            using (var unitOfWork=new UnitOfWork(new SalaryAppContext()))
-            {
-                var dataSource = unitOfWork.Banks.GetAll().ToList();
-                if (employee.BankName1Id.HasValue)
-                {
-                    BankNameComboBox.DataSource = dataSource;
-                    BankNameComboBox.DisplayMember = "Title";
-                    BankNameComboBox.ValueMember = "Id";
-                    BankNameComboBox.SelectedValue = employee.BankName1Id;
-                }
-            }
+
+            BindComboBox(BankNameComboBox,unitOfWork.Banks.GetAll().ToList(),"Title","Id",employee.BankName1Id);
+            
         }
 
         private void BindTextBox<TProperty>(TextBox textBox, Expression<Func<Employee, TProperty>> selector)
@@ -54,6 +46,19 @@ namespace SalaryApp.WinClient.Views.Employees
             var propertyName = visitor.GetPropertyName(selector);
             textBox.DataBindings.Add("Text", employee,propertyName);
 
+        }
+
+        private void BindComboBox<TComboItem>(ComboBox comboBox, List<TComboItem> items, string displayMemeber,
+            string valueMemebr, int? value)
+        {
+            if (value.HasValue)
+            {
+                BankNameComboBox.DataSource = items;
+                BankNameComboBox.DisplayMember = displayMemeber;
+                BankNameComboBox.ValueMember = valueMemebr;
+                BankNameComboBox.SelectedValue = value;
+
+            }
         }
     }
 
