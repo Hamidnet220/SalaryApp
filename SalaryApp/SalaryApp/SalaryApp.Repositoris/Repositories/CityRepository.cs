@@ -17,7 +17,7 @@ namespace SalaryApp.Repositoris.Repositories
 
         public List<City> GetById(int value)
         {
-            throw new System.NotImplementedException();
+            return null;
         }
 
         public List<City> GetByCityName(string value)
@@ -25,9 +25,6 @@ namespace SalaryApp.Repositoris.Repositories
             throw new System.NotImplementedException();
         }
 
-        public SalaryAppContext SalaryAppContext
-        {
-            get { return Context as SalaryAppContext; }
-        }
+        public SalaryAppContext SalaryAppContext => Context as SalaryAppContext;
     }
 }

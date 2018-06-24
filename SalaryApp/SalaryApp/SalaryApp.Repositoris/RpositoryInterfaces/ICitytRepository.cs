@@ -3,7 +3,7 @@ using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.Repositoris.RpositoryInterfaces
 {
-    public interface ICityRepository 
+    public interface ICityRepository :IRepository<City>
     {
         List<City> GetById(int value);
         List<City> GetByCityName(string value);
