@@ -1,97 +1,67 @@
 ﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using SalaryApp.Repositoris;
 using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class EmployeeList : ViewBase
+    public partial class EmployeeList : ViewBase 
     {
-        private DataGridView employeeListDataGrid;
-        private BindingSource bindigSource;
+        private UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
+        private GridControl<Employee> grid;
         public EmployeeList()
         {
             InitializeComponent();
             this.ViewTitle = "لیست پرسنل";
             this.WindowState = FormWindowState.Maximized;
-            this.Load += EmployeeList_Load;
-
+            
         }
 
-        private void EmployeeList_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            employeeListDataGrid=new DataGridView();
-            this.Controls.Add(employeeListDataGrid);
+            grid = new GridControl<Employee>(unitOfWork.Employees.GetAll().ToList());
+            grid.AddColumn("نام", emp => emp.FirstName);
+            grid.AddColumn("نام خانوادگی", emp => emp.LastName);
+            grid.AddColumn("نام پدر", emp => emp.FatherName);
+            grid.AddColumn("کد ملی", emp => emp.NationalCode);
+            grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
+            grid.AddColumn("تاریخ تولد ", emp => emp.DOB);
+            grid.AddColumn("محل تولد", emp => emp.POIId);
+            grid.AddColumn("تاریخ صدور", emp => emp.DOB);
+            grid.AddColumn("محل صدر", emp => emp.POIId);
+            grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
+            grid.AddColumn("نام بانک", emp => emp.LastName);
+            grid.AddColumn("شماره حساب", emp => emp.LastName);
+            grid.AddColumn("نام بانک", emp => emp.LastName);
+            grid.AddColumn("شماره حساب", emp => emp.LastName);
 
-            //Start Styling DataGridView
-            employeeListDataGrid.Dock = DockStyle.Fill;
-            employeeListDataGrid.AllowUserToAddRows = false;
-            employeeListDataGrid.AllowUserToDeleteRows = false;
-            employeeListDataGrid.EditMode=DataGridViewEditMode.EditProgrammatically;
-            employeeListDataGrid.AutoGenerateColumns = false;
-            employeeListDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            employeeListDataGrid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
-            //End Styling DataGridView
-
-            //Add Columns to DataGird View
-            AddTextBoxColumnToGrid(employeeListDataGrid,"نام","FirstName");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"نام خانوادگی","LastName");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"نام پدر","FatherName");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"شماره ملی","NationalCode");
-            AddTextBoxColumnToGrid(employeeListDataGrid, "شماره شناسنامه", "IdNumber");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"تاریخ تولد","DOB");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"محل تولد","POB");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"نام بانک","BankName1");
-            AddTextBoxColumnToGrid(employeeListDataGrid,"شماره حساب","BankAccount1");
-
-
-
-
-            using (var unitOfWork = new UnitOfWork(new SalaryAppContext()))
-            {
-                var employees=unitOfWork.Employees.GetAll();
-                bindigSource=new BindingSource();
-                bindigSource.DataSource = employees;
-                employeeListDataGrid.DataSource =bindigSource;
-                unitOfWork.Complete();
-            }
+            this.Controls.Add(grid);
+            base.OnLoad(e);
         }
 
-        //Add Column to DataGrid Method
-        private void AddTextBoxColumnToGrid(DataGridView grid, string columnName, string propertyName)
-        {
-            grid.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                Name = columnName,
-                DataPropertyName = propertyName
-            });
-        }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("آیا مطمئن هستید؟","هشدار",MessageBoxButtons.YesNo) != DialogResult.Yes)
+            if (MessageBox.Show("آیا مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo) != DialogResult.Yes)
                 return;
-
-            using (var unitOfWork=new UnitOfWork(new SalaryAppContext()))
-            {
-                var employee =(Employee) bindigSource.Current;
-                unitOfWork.Employees.Remove(employee);
-                unitOfWork.Complete();
-                bindigSource.RemoveCurrent();
-                employeeListDataGrid.Update();
-                employeeListDataGrid.Refresh();
-            }
+            unitOfWork.Employees.Remove(grid.CurrentItem);
+            unitOfWork.Complete();
+            grid.RemoveCurrent();
         }
 
-       
         private void EditButton_Click(object sender, EventArgs e)
         {
-            var employee = (Employee)bindigSource?.Current;
-            if (employee != null)
-            {
-                var employeeEditor=new EmployeeEditor(employee);
-                employeeEditor.ShowDialog();
-            }
+            var employeeEditor=new Views.Employees.EmployeeEditor(grid.CurrentItem);
+            employeeEditor.ShowDialog();
         }
+
+
     }
 }
+
+
+

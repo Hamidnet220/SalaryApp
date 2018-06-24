@@ -70,7 +70,7 @@
     <Compile Include="ViewBase.Designer.cs">
       <DependentUpon>ViewBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Employees\EditorView.cs" />
+    <Compile Include="Views\Employees\BindingTools.cs" />
     <Compile Include="Views\Employees\EmployeeEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +84,9 @@
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Employees\ExperssionHandler.cs" />
+    <Compile Include="Views\Employees\GridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    internal class ExperssionHandler:ExpressionVisitor
+    public  class ExperssionHandler:ExpressionVisitor
     {
         List<string> propertyNames=new List<string>();
 

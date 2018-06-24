@@ -39,30 +39,30 @@ namespace SalaryApp.WinClient.Views.Employees
 
         private void InitialFormDataBinding()
         {
-            var editorView = new EditorView<Employee>(_employee);
+            var bindingTools = new BindingTools<Employee>(_employee);
 
-            editorView.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
-            editorView.BindTextBox(LastNameTextBox, emp => emp.LastName);
-            editorView.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
-            editorView.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
-            editorView.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
+            bindingTools.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
+            bindingTools.BindTextBox(LastNameTextBox, emp => emp.LastName);
+            bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
+            bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
+            bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
 
 
-            editorView.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
+            bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
                 _unitOfWork.Banks.GetAll().ToList(),
                 "نامشخص",
                 b => b.Title,
                 b => b.Id,
                 _employee.BankName1Id);
 
-            editorView.BindComboBox<int?, City, Employee>(POBComboBox,
+            bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
                 _unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
                 _employee.POBId);
 
-            editorView.BindComboBox<int?, City, Employee>(POIComboBox,
+            bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
                 _unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,

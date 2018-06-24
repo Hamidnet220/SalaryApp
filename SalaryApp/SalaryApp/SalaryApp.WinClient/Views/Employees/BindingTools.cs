@@ -6,11 +6,11 @@ using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public class EditorView<TEntity> where TEntity:class 
+    public class BindingTools<TEntity> where TEntity:class 
     {
         private TEntity _entity;
 
-        public EditorView(TEntity entity)
+        public BindingTools(TEntity entity)
         {
             _entity = entity;
         }
