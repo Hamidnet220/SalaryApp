@@ -19,7 +19,7 @@ namespace SalaryApp.WinClient
            
             using (var unitOfWork = new UnitOfWork(new SalaryAppContext()))
             {
-                var bank = unitOfWork.Banks.GetByTitle("بانک تجارت");
+                var emp = unitOfWork.Employees.Get(29);
 
             }
 

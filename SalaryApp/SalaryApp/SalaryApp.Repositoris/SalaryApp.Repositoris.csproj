@@ -92,6 +92,18 @@
     <Compile Include="Migrations\201806220827071_AddBankAccountAgeAddressTelMobileToEmployee.Designer.cs">
       <DependentUpon>201806220827071_AddBankAccountAgeAddressTelMobileToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806240600395_check.cs" />
+    <Compile Include="Migrations\201806240600395_check.Designer.cs">
+      <DependentUpon>201806240600395_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806240603108_AddForignKeyForBankInEmployeeTable.cs" />
+    <Compile Include="Migrations\201806240603108_AddForignKeyForBankInEmployeeTable.Designer.cs">
+      <DependentUpon>201806240603108_AddForignKeyForBankInEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806240607548_AddForignKeyForBank2InEmployeeTable.cs" />
+    <Compile Include="Migrations\201806240607548_AddForignKeyForBank2InEmployeeTable.Designer.cs">
+      <DependentUpon>201806240607548_AddForignKeyForBank2InEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -157,6 +169,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806220827071_AddBankAccountAgeAddressTelMobileToEmployee.resx">
       <DependentUpon>201806220827071_AddBankAccountAgeAddressTelMobileToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806240600395_check.resx">
+      <DependentUpon>201806240600395_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806240603108_AddForignKeyForBankInEmployeeTable.resx">
+      <DependentUpon>201806240603108_AddForignKeyForBankInEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806240607548_AddForignKeyForBank2InEmployeeTable.resx">
+      <DependentUpon>201806240607548_AddForignKeyForBank2InEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

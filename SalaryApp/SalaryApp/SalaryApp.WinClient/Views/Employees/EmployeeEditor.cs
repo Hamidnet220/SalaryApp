@@ -14,6 +14,8 @@ namespace SalaryApp.WinClient.Views.Employees
             this.employee = employee;
             InitializeComponent();
             this.WindowState=FormWindowState.Maximized;
+            BankNameComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
+
             Load += EmployeeEditor_Load;
         }
 
@@ -30,6 +32,7 @@ namespace SalaryApp.WinClient.Views.Employees
             BindTextBox(FatherNameTextBox,emp=>emp.FatherName);
             BindTextBox(NationalCodeTextBox,emp=>emp.NationalCode);
             BindTextBox(IdNumberTextBox,emp=>emp.IdNumber);
+
         }
 
         private void BindTextBox<TProperty>(TextBox textBox, Expression<Func<Employee, TProperty>> selector)

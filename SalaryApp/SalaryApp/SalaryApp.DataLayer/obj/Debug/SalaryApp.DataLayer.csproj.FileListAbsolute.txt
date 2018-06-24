@@ -1,0 +1,14 @@
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\SalaryApp.DataLayer.dll.config
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\SalaryApp.DataLayer.dll
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\SalaryApp.DataLayer.pdb
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\EntityFramework.dll
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\EntityFramework.xml
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.csprojAssemblyReference.cache
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.Properties.Resources.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.csproj.GenerateResource.cache
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.csproj.CoreCompileInputs.cache
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.csproj.CopyComplete
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.dll
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.DataLayer\obj\Debug\SalaryApp.DataLayer.pdb
