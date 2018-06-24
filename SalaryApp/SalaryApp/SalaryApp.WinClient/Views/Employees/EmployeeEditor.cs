@@ -36,7 +36,12 @@ namespace SalaryApp.WinClient.Views.Employees
             BindTextBox(NationalCodeTextBox,emp=>emp.NationalCode);
             BindTextBox(IdNumberTextBox,emp=>emp.IdNumber);
 
-            BindComboBox(BankNameComboBox,unitOfWork.Banks.GetAll().ToList(),"Title","Id",employee.BankName1Id);
+            BindComboBox<int?,Bank,Employee>(BankNameComboBox,
+                                            unitOfWork.Banks.GetAll().ToList(),
+                                            "نامشخص",
+                                            b=>b.Title,
+                                            b=>b.Id,
+                                            employee.BankName1Id);
             
         }
 
@@ -48,16 +53,23 @@ namespace SalaryApp.WinClient.Views.Employees
 
         }
 
-        private void BindComboBox<TComboItem>(ComboBox comboBox, List<TComboItem> items, string displayMemeber,
-            string valueMemebr, int? value)
+        private void BindComboBox<TProperty,TComboItem,TEntity>(ComboBox comboBox,
+                                            List<TComboItem> items,
+                                            string title,
+                                            Expression<Func<TComboItem,string>> displayMemeber,
+                                            Expression<Func<TComboItem,TProperty>> valueMemebr, 
+                                            int? value)
         {
+
+            var propertyVisitro = new PropertyVisitor();
+            BankNameComboBox.DataSource = items;
+            BankNameComboBox.DisplayMember = propertyVisitro.GetPropertyName(displayMemeber);
+            BankNameComboBox.ValueMember = propertyVisitro.GetPropertyName(valueMemebr);
+            BankNameComboBox.Text =title;
+
             if (value.HasValue)
             {
-                BankNameComboBox.DataSource = items;
-                BankNameComboBox.DisplayMember = displayMemeber;
-                BankNameComboBox.ValueMember = valueMemebr;
                 BankNameComboBox.SelectedValue = value;
-
             }
         }
     }
@@ -68,6 +80,7 @@ namespace SalaryApp.WinClient.Views.Employees
 
         public string GetPropertyName(Expression exp)
         {
+            propertyNames.Clear();
             Visit(exp);
             propertyNames.Reverse();
             return string.Join(".", propertyNames);
