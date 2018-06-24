@@ -27,3 +27,5 @@ D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.check.resources
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddForignKeyForBankInEmployeeTable.resources
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddForignKeyForBank2InEmployeeTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.DeletePOIandPOBfromEployeeTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddPobAndPoiToEmployeeTable.resources

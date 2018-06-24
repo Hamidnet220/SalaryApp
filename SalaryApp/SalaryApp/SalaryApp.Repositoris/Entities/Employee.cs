@@ -10,22 +10,37 @@ namespace SalaryApp.Repositoris.Entities
     public  class Employee
     {
         public int Id { get; set; }
+
         [MaxLength(50)]
         public string FirstName { get; set; }
+
         [MaxLength(50)]
         public string LastName { get; set; }
+
         [MaxLength(50)]
         public string FatherName { get; set; }
-        public City POB { get; set; }
+
         public DateTime? DOB { get; set; }
+
+        public City POB { get; set; }
+        public int? POBId { get; set; }
+
         public City POI { get; set; }
+        public int? POIId { get; set; }
+
         [MaxLength(10)]
         public string NationalCode { get; set; }
+
         [MaxLength(10)]
         public string IdNumber { get; set; }
-        public Gender Gender { get; set; }
+
+        //public Gender Gender { get; set; }
+        //public int? GenderId { get; set; }
+
         public Country Nationality { get; set; }
+
         public DateTime? HireDate { get; set; }
+
         public int? Experience { get; set; }
         //public int MilitaryServStId { get; set; }
         //public int EducationDegreeId { get; set; }

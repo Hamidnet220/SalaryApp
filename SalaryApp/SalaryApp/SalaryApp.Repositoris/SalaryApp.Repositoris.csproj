@@ -104,6 +104,14 @@
     <Compile Include="Migrations\201806240607548_AddForignKeyForBank2InEmployeeTable.Designer.cs">
       <DependentUpon>201806240607548_AddForignKeyForBank2InEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806241153196_DeletePOIandPOBfromEployeeTable.cs" />
+    <Compile Include="Migrations\201806241153196_DeletePOIandPOBfromEployeeTable.Designer.cs">
+      <DependentUpon>201806241153196_DeletePOIandPOBfromEployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806241154397_AddPobAndPoiToEmployeeTable.cs" />
+    <Compile Include="Migrations\201806241154397_AddPobAndPoiToEmployeeTable.Designer.cs">
+      <DependentUpon>201806241154397_AddPobAndPoiToEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -178,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806240607548_AddForignKeyForBank2InEmployeeTable.resx">
       <DependentUpon>201806240607548_AddForignKeyForBank2InEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806241153196_DeletePOIandPOBfromEployeeTable.resx">
+      <DependentUpon>201806241153196_DeletePOIandPOBfromEployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806241154397_AddPobAndPoiToEmployeeTable.resx">
+      <DependentUpon>201806241154397_AddPobAndPoiToEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
