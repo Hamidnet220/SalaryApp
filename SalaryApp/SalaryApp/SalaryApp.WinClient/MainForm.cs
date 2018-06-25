@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using SalaryApp.WinClient.Views.Companies;
 
 namespace SalaryApp.WinClient
 {
@@ -17,7 +18,11 @@ namespace SalaryApp.WinClient
                     var view = new Views.Employees.EmployeeList();
                     view.ShowDialog();
                 });
-                baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, null);
+                baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, (obj, e) =>
+                {
+                    var view=new Views.Companies.CompaniesList();
+                    view.ShowDialog();
+                });
                 baseInfoItem.DropDownItems.Add("خروج", null, (obj, e) => { Application.Exit();});
 
         }

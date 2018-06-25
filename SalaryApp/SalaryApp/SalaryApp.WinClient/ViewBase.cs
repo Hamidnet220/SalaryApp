@@ -9,11 +9,15 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalaryApp.Repositoris;
+using SalaryApp.Repositoris.Entities;
+using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient
 {
-    public partial class ViewBase : Form
+    public partial class ViewBase : Form 
     {
+        protected UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         public ViewBase()
         {
             InitializeComponent();

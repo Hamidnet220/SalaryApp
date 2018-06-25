@@ -11,8 +11,9 @@ namespace SalaryApp.WinClient.Views.Employees
 {
     public partial class EmployeeList : ViewBase 
     {
-        private UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
-        private GridControl<Employee> grid;
+
+        protected GridControl<Employee> grid;
+
         public EmployeeList()
         {
             InitializeComponent();

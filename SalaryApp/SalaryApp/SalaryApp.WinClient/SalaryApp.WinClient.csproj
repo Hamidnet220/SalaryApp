@@ -70,6 +70,12 @@
     <Compile Include="ViewBase.Designer.cs">
       <DependentUpon>ViewBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Companies\CompaniesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Companies\CompaniesList.Designer.cs">
+      <DependentUpon>CompaniesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Employees\BindingTools.cs" />
     <Compile Include="Views\Employees\EmployeeEditor.cs">
       <SubType>Form</SubType>
