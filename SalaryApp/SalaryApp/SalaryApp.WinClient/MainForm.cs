@@ -13,22 +13,26 @@ namespace SalaryApp.WinClient
             this.Text = @"برنامه حقوق و دستمزد شرکت یاور پویای جنوب";
 
             var baseInfoItem =(ToolStripMenuItem) MainMenuStrip.Items.Add("اطلاعات پایه",null,null);
-                baseInfoItem.DropDownItems.Add("اطلاعات کارکنان", null, (obj, e) =>
+
+            baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, (obj, e) =>
+            {
+                var view=new Views.Companies.CompaniesList();
+                view.ShowDialog();
+            });
+
+            baseInfoItem.DropDownItems.Add("اطلاعات کارگاه ها", null, (obj, e) =>
+            {
+                var view = new Views.Workplace.WorkplaceList();
+                view.ShowDialog();
+            });
+
+            baseInfoItem.DropDownItems.Add("اطلاعات کارکنان", null, (obj, e) =>
                 {
                     var view = new Views.Employees.EmployeeList();
                     view.ShowDialog();
                 });
-                baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, (obj, e) =>
-                {
-                    var view=new Views.Companies.CompaniesList();
-                    view.ShowDialog();
-                });
 
-                baseInfoItem.DropDownItems.Add("اطلاعات شرکت کارگاه ها", null, (obj, e) =>
-                {
-                    var view = new Views.Workplace.WorkplaceList();
-                    view.ShowDialog();
-                });
+
             baseInfoItem.DropDownItems.Add("خروج", null, (obj, e) => { Application.Exit();});
 
         }
