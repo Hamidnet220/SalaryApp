@@ -132,6 +132,10 @@
     <Compile Include="Migrations\201806251442148_AddWorkplaceTable1.Designer.cs">
       <DependentUpon>201806251442148_AddWorkplaceTable1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs" />
+    <Compile Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.Designer.cs">
+      <DependentUpon>201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -228,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251442148_AddWorkplaceTable1.resx">
       <DependentUpon>201806251442148_AddWorkplaceTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.resx">
+      <DependentUpon>201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

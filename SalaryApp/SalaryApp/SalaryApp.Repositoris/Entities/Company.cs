@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace SalaryApp.Repositoris.Entities
 
@@ -15,5 +16,7 @@ namespace SalaryApp.Repositoris.Entities
         public bool IsDeleted {get;set;}
         public DateTime? DeletedDate {get;set;}
         public int? DeletedByUserID {get;set;}
+
+        public virtual ICollection<Workplace> Workplaces { get; set; }
     }
 }

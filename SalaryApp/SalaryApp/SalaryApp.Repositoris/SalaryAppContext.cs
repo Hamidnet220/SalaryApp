@@ -21,11 +21,16 @@ namespace SalaryApp.Repositoris
         public virtual DbSet<Education> Educations { get; set; }
         public virtual DbSet<MilitaryServiceStatus> MilitaryServiceStatus { get; set; }
         public virtual DbSet<Workplace> Workplaces { get; set; }
-        
-
-        
 
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Company>()
+                .HasMany(c => c.Workplaces)
+                .WithRequired(w => w.Company)
+                .HasForeignKey(w => w.CompanyId);
 
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

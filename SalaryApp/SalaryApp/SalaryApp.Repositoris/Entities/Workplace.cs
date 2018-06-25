@@ -9,6 +9,7 @@ namespace SalaryApp.Repositoris.Entities
     public class Workplace
     {
         public int Id { get; set; }
+        public Company Company { get; set; }
         public int CompanyId { get; set; }
         public bool IsAcitve { get; set; }
         public string Title { get; set; }

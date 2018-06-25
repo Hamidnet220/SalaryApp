@@ -42,7 +42,7 @@ namespace SalaryApp.Repositoris.Entities
         public DateTime? HireDate { get; set; }
 
         public int? Experience { get; set; }
-        //public int MilitaryServStId { get; set; }
+        public int? MilitaryServiceStatusId { get; set; }
         //public int EducationDegreeId { get; set; }
         public int WorkplaceId { get; set; }
         //public int LaborStatus { get; set; }
