@@ -34,8 +34,8 @@ namespace SalaryApp.Repositoris.Entities
         [MaxLength(10)]
         public string IdNumber { get; set; }
 
-        //public Gender Gender { get; set; }
-        //public int? GenderId { get; set; }
+        public Gender Gender { get; set; }
+        public int? GenderId { get; set; }
 
         public Country Nationality { get; set; }
 

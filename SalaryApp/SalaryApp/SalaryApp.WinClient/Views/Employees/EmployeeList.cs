@@ -35,9 +35,7 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.AddColumn("محل صدر", emp => emp.POIId);
             grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
             grid.AddColumn("نام بانک", emp => emp.LastName);
-            grid.AddColumn("شماره حساب", emp => emp.LastName);
-            grid.AddColumn("نام بانک", emp => emp.LastName);
-            grid.AddColumn("شماره حساب", emp => emp.LastName);
+            grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
 
             this.Controls.Add(grid);
             base.OnLoad(e);

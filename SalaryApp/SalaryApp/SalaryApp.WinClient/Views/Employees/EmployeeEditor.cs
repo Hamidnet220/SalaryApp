@@ -46,6 +46,7 @@ namespace SalaryApp.WinClient.Views.Employees
             bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
             bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
             bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
+            bindingTools.BindTextBox(Account1TextBox,emp=>emp.BankAccNumber1);
 
 
             bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,

@@ -39,7 +39,7 @@
             this.IdNumberTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Account1TextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -152,13 +152,13 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "نام بانک";
             // 
-            // textBox7
+            // Account1TextBox
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(514, 259);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(120, 22);
-            this.textBox7.TabIndex = 0;
+            this.Account1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Account1TextBox.Location = new System.Drawing.Point(514, 259);
+            this.Account1TextBox.Name = "Account1TextBox";
+            this.Account1TextBox.Size = new System.Drawing.Size(120, 22);
+            this.Account1TextBox.TabIndex = 0;
             // 
             // label7
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.Account1TextBox);
             this.Controls.Add(this.IdNumberTextBox);
             this.Controls.Add(this.NationalCodeTextBox);
             this.Controls.Add(this.FatherNameTextBox);
@@ -297,7 +297,7 @@
         private System.Windows.Forms.TextBox IdNumberTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Account1TextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;

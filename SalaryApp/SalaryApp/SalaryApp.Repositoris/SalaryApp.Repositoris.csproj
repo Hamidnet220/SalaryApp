@@ -112,6 +112,10 @@
     <Compile Include="Migrations\201806241154397_AddPobAndPoiToEmployeeTable.Designer.cs">
       <DependentUpon>201806241154397_AddPobAndPoiToEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806250450432_check1.cs" />
+    <Compile Include="Migrations\201806250450432_check1.Designer.cs">
+      <DependentUpon>201806250450432_check1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -192,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806241154397_AddPobAndPoiToEmployeeTable.resx">
       <DependentUpon>201806241154397_AddPobAndPoiToEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250450432_check1.resx">
+      <DependentUpon>201806250450432_check1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

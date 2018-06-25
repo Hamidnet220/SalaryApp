@@ -12,6 +12,9 @@ namespace SalaryApp.WinClient.Views.Employees
 
         public GridControl(IEnumerable<TEntity> entities)
         {
+            //Boost up Performance 
+            this.DoubleBuffered = true;
+
            //Start Styling DataGridView
             this.Dock = DockStyle.Fill;
             this.AllowUserToAddRows = false;

@@ -16,13 +16,10 @@ namespace SalaryApp.WinClient
         [STAThread]
         static void Main()
         {
-           
-            using (var unitOfWork = new UnitOfWork(new SalaryAppContext()))
+            using (var un=new UnitOfWork(new SalaryAppContext()))
             {
-                var emp = unitOfWork.Employees.Get(29);
-
+                var emps = un.Employees.GetAll();
             }
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
