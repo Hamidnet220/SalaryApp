@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using SalaryApp.Repositoris.Entities;
+using SalaryApp.WinClient.Views.Controls;
 using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient.Views.Companies
@@ -21,6 +22,10 @@ namespace SalaryApp.WinClient.Views.Companies
             grid = new GridControl<Company>(unitOfWork.Companies.GetAll().Where(c=>c.IsDeleted==false).ToList());
             grid.AddColumn("عنوان شرکت ", c => c.Title);
             grid.AddColumn("آدرس", c => c.Address);
+            grid.AddColumn("شماره تماس", c => c.Tel);
+            grid.AddColumn("شماره فکس", c => c.Fax);
+
+
             this.Controls.Add(grid);
             base.OnLoad(e);
         }

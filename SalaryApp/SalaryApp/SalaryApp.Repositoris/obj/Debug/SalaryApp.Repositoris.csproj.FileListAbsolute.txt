@@ -31,3 +31,5 @@ D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.pdb
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.check1.resources
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddMilitaryStEducationInsuraceToEmployeeTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddWorkplaceTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddWorkplaceTable1.resources

@@ -19,6 +19,7 @@ namespace SalaryApp.Repositoris
             Companies=new CompanyRepository(_context);
             Genders=new GenderRepository(_context);
             Employees=new EmployeeRepository(_context);
+            Workplaces=new WorkplaceRepository(_context);
 
             
         }
@@ -32,6 +33,7 @@ namespace SalaryApp.Repositoris
         public ICompanyRepository Companies { get; }
         public IGenderRepository Genders { get; }
         public IEmployeeRepository Employees { get; }
+        public IWorkplaceRepository Workplaces { get; }
        
          public int Complete()
         {

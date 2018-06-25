@@ -20,6 +20,8 @@ namespace SalaryApp.Repositoris
         public virtual DbSet<Insurance> Insurances { get; set; }
         public virtual DbSet<Education> Educations { get; set; }
         public virtual DbSet<MilitaryServiceStatus> MilitaryServiceStatus { get; set; }
+        public virtual DbSet<Workplace> Workplaces { get; set; }
+        
 
         
 

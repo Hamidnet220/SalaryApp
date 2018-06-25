@@ -23,7 +23,13 @@ namespace SalaryApp.WinClient
                     var view=new Views.Companies.CompaniesList();
                     view.ShowDialog();
                 });
-                baseInfoItem.DropDownItems.Add("خروج", null, (obj, e) => { Application.Exit();});
+
+                baseInfoItem.DropDownItems.Add("اطلاعات شرکت کارگاه ها", null, (obj, e) =>
+                {
+                    var view = new Views.Workplace.WorkplaceList();
+                    view.ShowDialog();
+                });
+            baseInfoItem.DropDownItems.Add("خروج", null, (obj, e) => { Application.Exit();});
 
         }
     }

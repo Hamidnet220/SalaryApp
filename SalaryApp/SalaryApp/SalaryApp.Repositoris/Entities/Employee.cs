@@ -44,7 +44,7 @@ namespace SalaryApp.Repositoris.Entities
         public int? Experience { get; set; }
         //public int MilitaryServStId { get; set; }
         //public int EducationDegreeId { get; set; }
-        //public int WorksiteId { get; set; }
+        public int WorkplaceId { get; set; }
         //public int LaborStatus { get; set; }
         public bool MaritalStatus { get; set; }
         //public int? ComplimentaryInsId { get; set; }

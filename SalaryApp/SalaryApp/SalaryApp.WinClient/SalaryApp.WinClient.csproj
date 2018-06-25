@@ -76,6 +76,9 @@
     <Compile Include="Views\Companies\CompaniesList.Designer.cs">
       <DependentUpon>CompaniesList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Controls\GridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\Employees\BindingTools.cs" />
     <Compile Include="Views\Employees\EmployeeEditor.cs">
       <SubType>Form</SubType>
@@ -90,8 +93,17 @@
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Employees\ExperssionHandler.cs" />
-    <Compile Include="Views\Employees\GridControl.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Views\Workplace\WorkplaceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Workplace\WorkplaceEditor.Designer.cs">
+      <DependentUpon>WorkplaceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Workplace\WorkplaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Workplace\WorkplaceList.Designer.cs">
+      <DependentUpon>WorkplaceList.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

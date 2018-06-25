@@ -58,6 +58,7 @@
     <Compile Include="Entities\Gender.cs" />
     <Compile Include="Entities\Insurance.cs" />
     <Compile Include="Entities\MilitaryServiceStatus.cs" />
+    <Compile Include="Entities\Workplace.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.Designer.cs">
@@ -123,6 +124,14 @@
     <Compile Include="Migrations\201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.Designer.cs">
       <DependentUpon>201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806251440418_AddWorkplaceTable.cs" />
+    <Compile Include="Migrations\201806251440418_AddWorkplaceTable.Designer.cs">
+      <DependentUpon>201806251440418_AddWorkplaceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806251442148_AddWorkplaceTable1.cs" />
+    <Compile Include="Migrations\201806251442148_AddWorkplaceTable1.Designer.cs">
+      <DependentUpon>201806251442148_AddWorkplaceTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -138,6 +147,7 @@
     <Compile Include="Repositories\EducationRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
+    <Compile Include="Repositories\WorkplaceRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEducationRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEmployeeRepository.cs" />
@@ -147,6 +157,7 @@
     <Compile Include="Repository.cs" />
     <Compile Include="RpositoryInterfaces\IBankReopsitory.cs" />
     <Compile Include="RpositoryInterfaces\IGenderRepository.cs" />
+    <Compile Include="RpositoryInterfaces\IWorkplaceRepository.cs" />
     <Compile Include="SalaryAppContext.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
@@ -211,6 +222,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.resx">
       <DependentUpon>201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251440418_AddWorkplaceTable.resx">
+      <DependentUpon>201806251440418_AddWorkplaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806251442148_AddWorkplaceTable1.resx">
+      <DependentUpon>201806251442148_AddWorkplaceTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

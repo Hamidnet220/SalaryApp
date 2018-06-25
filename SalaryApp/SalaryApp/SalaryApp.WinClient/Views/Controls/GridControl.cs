@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
+using SalaryApp.WinClient.Views.Employees;
 
-namespace SalaryApp.WinClient.Views.Employees
+namespace SalaryApp.WinClient.Views.Controls
 {
     public class GridControl<TEntity>:DataGridView where TEntity:class
     {

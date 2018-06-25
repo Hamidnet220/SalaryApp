@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using SalaryApp.Repositoris;
 using SalaryApp.Repositoris.Entities;
+using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
