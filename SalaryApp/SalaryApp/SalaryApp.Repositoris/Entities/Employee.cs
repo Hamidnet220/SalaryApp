@@ -46,19 +46,23 @@ namespace SalaryApp.Repositoris.Entities
         //public int EducationDegreeId { get; set; }
         //public int WorksiteId { get; set; }
         //public int LaborStatus { get; set; }
-        //public bool MaritalStatus { get; set; }
+        public bool MaritalStatus { get; set; }
         //public int? ComplimentaryInsId { get; set; }
         //public int ComplimentaryNumber { get; set; }
         //public int InsurenceType { get; set; }
         //public string InsurenceId { get; set; }
         public int? BankName1Id { get; set; }
         public Bank BankName1 { get; set; }
+
         [MaxLength(50)]
         public string BankAccNumber1 { get; set; }
+
         public int? BankName2Id { get; set; }
         public Bank BankName2 { get; set; }
+
         [MaxLength(50)]
         public string BankAccNumber2 { get; set; }
+
         public int Children { get; set; }
         //public int? Education { get; set; }
         public int? Age { get; set; }

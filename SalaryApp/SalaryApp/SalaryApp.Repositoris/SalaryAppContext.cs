@@ -17,6 +17,11 @@ namespace SalaryApp.Repositoris
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Gender> Genders { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Insurance> Insurances { get; set; }
+        public virtual DbSet<Education> Educations { get; set; }
+        public virtual DbSet<MilitaryServiceStatus> MilitaryServiceStatus { get; set; }
+
+        
 
 
 

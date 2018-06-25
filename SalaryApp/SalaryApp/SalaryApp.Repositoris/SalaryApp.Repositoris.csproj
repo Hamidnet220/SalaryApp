@@ -53,8 +53,11 @@
   <ItemGroup>
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\Education.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\Insurance.cs" />
+    <Compile Include="Entities\MilitaryServiceStatus.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.Designer.cs">
@@ -116,6 +119,10 @@
     <Compile Include="Migrations\201806250450432_check1.Designer.cs">
       <DependentUpon>201806250450432_check1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.cs" />
+    <Compile Include="Migrations\201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.Designer.cs">
+      <DependentUpon>201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -128,9 +135,11 @@
     <Compile Include="Repositories\CityRepository.cs" />
     <Compile Include="Repositories\CompanyRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
+    <Compile Include="Repositories\EducationRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICountryRepository.cs" />
+    <Compile Include="RpositoryInterfaces\IEducationRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEmployeeRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICompanyRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICitytRepository.cs" />
@@ -199,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806250450432_check1.resx">
       <DependentUpon>201806250450432_check1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.resx">
+      <DependentUpon>201806250845492_AddMilitaryStEducationInsuraceToEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
