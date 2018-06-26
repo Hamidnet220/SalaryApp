@@ -7,17 +7,14 @@ using System.Threading.Tasks;
 
 namespace SalaryApp.Repositoris.Entities
 {
-    public  class Employee
+    public class Employee
     {
         public int Id { get; set; }
 
-        [MaxLength(50)]
         public string FirstName { get; set; }
 
-        [MaxLength(50)]
         public string LastName { get; set; }
 
-        [MaxLength(50)]
         public string FatherName { get; set; }
 
         public DateTime? DOB { get; set; }
@@ -28,10 +25,8 @@ namespace SalaryApp.Repositoris.Entities
         public City POI { get; set; }
         public int? POIId { get; set; }
 
-        [MaxLength(10)]
         public string NationalCode { get; set; }
 
-        [MaxLength(10)]
         public string IdNumber { get; set; }
 
         public Gender Gender { get; set; }
@@ -54,13 +49,11 @@ namespace SalaryApp.Repositoris.Entities
         public int? BankName1Id { get; set; }
         public Bank BankName1 { get; set; }
 
-        [MaxLength(50)]
         public string BankAccNumber1 { get; set; }
 
         public int? BankName2Id { get; set; }
         public Bank BankName2 { get; set; }
 
-        [MaxLength(50)]
         public string BankAccNumber2 { get; set; }
 
         public int Children { get; set; }
@@ -74,5 +67,5 @@ namespace SalaryApp.Repositoris.Entities
 
     }
 
-   
+
 }

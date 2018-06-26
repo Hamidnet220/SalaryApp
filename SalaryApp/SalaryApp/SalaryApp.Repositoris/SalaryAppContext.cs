@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using SalaryApp.Repositoris.Entities;
+using SalaryApp.Repositoris.EntitiyConfiguration;
 
 namespace SalaryApp.Repositoris
 {
@@ -25,6 +26,8 @@ namespace SalaryApp.Repositoris
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new EmployeeConfiguration());
+
             modelBuilder.Entity<Company>()
                 .HasMany(c => c.Workplaces)
                 .WithRequired(w => w.Company)

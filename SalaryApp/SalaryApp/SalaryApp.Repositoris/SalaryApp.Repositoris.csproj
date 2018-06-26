@@ -59,6 +59,7 @@
     <Compile Include="Entities\Insurance.cs" />
     <Compile Include="Entities\MilitaryServiceStatus.cs" />
     <Compile Include="Entities\Workplace.cs" />
+    <Compile Include="EntitiyConfiguration\EmployeeConfiguration.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.cs" />
     <Compile Include="Migrations\201806201444175_AddCompany.Designer.cs">
@@ -135,6 +136,10 @@
     <Compile Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs" />
     <Compile Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.Designer.cs">
       <DependentUpon>201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806260045262_AddCourceConfiguratinModleBuilder.cs" />
+    <Compile Include="Migrations\201806260045262_AddCourceConfiguratinModleBuilder.Designer.cs">
+      <DependentUpon>201806260045262_AddCourceConfiguratinModleBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
@@ -235,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.resx">
       <DependentUpon>201806251551301_AddCompanyIdAsForeginKeyToWorkplaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806260045262_AddCourceConfiguratinModleBuilder.resx">
+      <DependentUpon>201806260045262_AddCourceConfiguratinModleBuilder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
