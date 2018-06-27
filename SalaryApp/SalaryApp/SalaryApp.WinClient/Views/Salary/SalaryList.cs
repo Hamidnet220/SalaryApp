@@ -11,7 +11,7 @@ using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public partial class SalaryList : ViewBase
+    public partial class SalaryList : ViewBase<SalaryList>
     {
         protected GridControl<Repositoris.Entities.Salary> grid;
         protected Repositoris.Entities.Salary salary=new Repositoris.Entities.Salary();
@@ -20,7 +20,6 @@ namespace SalaryApp.WinClient.Views.Salary
         {
             InitializeComponent();
             this.ViewTitle = @"لیست حقوق ها";
-            this.WindowState = FormWindowState.Maximized;
         }
 
         protected override void OnLoad(EventArgs e)
