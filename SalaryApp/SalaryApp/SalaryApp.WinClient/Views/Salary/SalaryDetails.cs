@@ -12,13 +12,11 @@ using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public partial class SalaryDetails : ViewBase
+    public partial class SalaryDetails : ViewBase<SalaryDetails>
     {
         public SalaryDetails()
         {
-            InitializeComponent();
             this.ViewTitle = "لیست پرسنل ماه جاری";
-            this.WindowState = FormWindowState.Maximized;
         }
 
         protected override void OnLoad(EventArgs e)

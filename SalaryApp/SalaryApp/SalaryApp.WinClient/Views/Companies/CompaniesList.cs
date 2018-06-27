@@ -7,7 +7,7 @@ using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient.Views.Companies
 {
-    public partial class CompaniesList : ViewBase
+    public partial class CompaniesList : ViewBase<Company>
     {
         protected GridControl<Company> grid;
         public CompaniesList()

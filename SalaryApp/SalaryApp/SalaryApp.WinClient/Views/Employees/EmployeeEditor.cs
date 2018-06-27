@@ -8,7 +8,7 @@ using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class EmployeeEditor : ViewBase
+    public partial class EmployeeEditor : ViewBase<Employee>
     {
         private readonly Employee _employee;   
         private readonly UnitOfWork _unitOfWork=new UnitOfWork(new SalaryAppContext());

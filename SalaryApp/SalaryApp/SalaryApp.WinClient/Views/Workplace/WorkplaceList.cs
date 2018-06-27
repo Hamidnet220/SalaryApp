@@ -12,16 +12,13 @@ using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Workplace
 {
-    public partial class WorkplaceList : ViewBase
+    public partial class WorkplaceList : ViewBase<WorkplaceList>
     {
         protected GridControl<Repositoris.Entities.Workplace> grid;
 
         public WorkplaceList()
         {
-            InitializeComponent();
             ViewTitle = @"لیست کارگاه ها";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.WindowState=FormWindowState.Maximized;
         }
 
         protected override void OnLoad(EventArgs e)
