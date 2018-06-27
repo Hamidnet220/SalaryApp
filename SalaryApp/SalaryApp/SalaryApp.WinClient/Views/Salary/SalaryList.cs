@@ -14,6 +14,7 @@ namespace SalaryApp.WinClient.Views.Salary
     public partial class SalaryList : ViewBase
     {
         protected GridControl<Repositoris.Entities.Salary> grid;
+        protected Repositoris.Entities.Salary salary=new Repositoris.Entities.Salary();
 
         public SalaryList()
         {
@@ -25,6 +26,7 @@ namespace SalaryApp.WinClient.Views.Salary
         protected override void OnLoad(EventArgs e)
         {
             grid = new GridControl<Repositoris.Entities.Salary>(unitOfWork.Salaries.GetAll().ToList());
+            salary = grid.CurrentItem;
             grid.AddColumn("عنوان لیست", s => s.Title);
             grid.AddColumn("سال", s => s.Year);
             grid.AddColumn("ماه", s => s.Month);
@@ -35,6 +37,9 @@ namespace SalaryApp.WinClient.Views.Salary
             base.OnLoad(e);
         }
 
-        
+        private void EmployeesList_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -58,7 +58,7 @@
             this.FinalApprov.Location = new System.Drawing.Point(51, 12);
             this.FinalApprov.Name = "FinalApprov";
             this.FinalApprov.Size = new System.Drawing.Size(108, 23);
-            this.FinalApprov.TabIndex = 0;
+            this.FinalApprov.TabIndex = 5;
             this.FinalApprov.Text = "تایید نهایی لیست";
             this.FinalApprov.UseVisualStyleBackColor = true;
             // 
@@ -68,7 +68,7 @@
             this.CreatePayrollFiles.Location = new System.Drawing.Point(165, 12);
             this.CreatePayrollFiles.Name = "CreatePayrollFiles";
             this.CreatePayrollFiles.Size = new System.Drawing.Size(146, 23);
-            this.CreatePayrollFiles.TabIndex = 0;
+            this.CreatePayrollFiles.TabIndex = 4;
             this.CreatePayrollFiles.Text = "ایجاد فیش های حقوقی";
             this.CreatePayrollFiles.UseVisualStyleBackColor = true;
             // 
@@ -78,7 +78,7 @@
             this.CreateTaxFiles.Location = new System.Drawing.Point(317, 12);
             this.CreateTaxFiles.Name = "CreateTaxFiles";
             this.CreateTaxFiles.Size = new System.Drawing.Size(108, 23);
-            this.CreateTaxFiles.TabIndex = 0;
+            this.CreateTaxFiles.TabIndex = 3;
             this.CreateTaxFiles.Text = "ایجاد فایل مالیات";
             this.CreateTaxFiles.UseVisualStyleBackColor = true;
             // 
@@ -88,7 +88,7 @@
             this.CreateInsuranceFiles.Location = new System.Drawing.Point(431, 12);
             this.CreateInsuranceFiles.Name = "CreateInsuranceFiles";
             this.CreateInsuranceFiles.Size = new System.Drawing.Size(108, 23);
-            this.CreateInsuranceFiles.TabIndex = 0;
+            this.CreateInsuranceFiles.TabIndex = 2;
             this.CreateInsuranceFiles.Text = "ایجاد فایل بیمه";
             this.CreateInsuranceFiles.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +98,7 @@
             this.CreatePayFile.Location = new System.Drawing.Point(545, 12);
             this.CreatePayFile.Name = "CreatePayFile";
             this.CreatePayFile.Size = new System.Drawing.Size(108, 23);
-            this.CreatePayFile.TabIndex = 0;
+            this.CreatePayFile.TabIndex = 1;
             this.CreatePayFile.Text = "ایجاد فایل پرداخت";
             this.CreatePayFile.UseVisualStyleBackColor = true;
             // 
@@ -111,6 +111,7 @@
             this.EmployeesList.TabIndex = 0;
             this.EmployeesList.Text = "لیست پرسنل";
             this.EmployeesList.UseVisualStyleBackColor = true;
+            this.EmployeesList.Click += new System.EventHandler(this.EmployeesList_Click);
             // 
             // SalaryList
             // 

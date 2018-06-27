@@ -175,6 +175,18 @@
     <Compile Include="Migrations\201806270314511_foo21.Designer.cs">
       <DependentUpon>201806270314511_foo21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806270926036_AddInsuranceCodeToWorkplace.cs" />
+    <Compile Include="Migrations\201806270926036_AddInsuranceCodeToWorkplace.Designer.cs">
+      <DependentUpon>201806270926036_AddInsuranceCodeToWorkplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270933154_RenameInsuranceIdToInsuranceNumberEmployeeTable.cs" />
+    <Compile Include="Migrations\201806270933154_RenameInsuranceIdToInsuranceNumberEmployeeTable.Designer.cs">
+      <DependentUpon>201806270933154_RenameInsuranceIdToInsuranceNumberEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.cs" />
+    <Compile Include="Migrations\201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.Designer.cs">
+      <DependentUpon>201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -305,6 +317,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806270314511_foo21.resx">
       <DependentUpon>201806270314511_foo21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270926036_AddInsuranceCodeToWorkplace.resx">
+      <DependentUpon>201806270926036_AddInsuranceCodeToWorkplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270933154_RenameInsuranceIdToInsuranceNumberEmployeeTable.resx">
+      <DependentUpon>201806270933154_RenameInsuranceIdToInsuranceNumberEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.resx">
+      <DependentUpon>201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

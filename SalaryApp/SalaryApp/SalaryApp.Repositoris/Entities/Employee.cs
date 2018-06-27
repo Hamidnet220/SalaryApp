@@ -10,32 +10,20 @@ namespace SalaryApp.Repositoris.Entities
     public class Employee
     {
         public int Id { get; set; }
-
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
         public string FatherName { get; set; }
-
         public DateTime? DOB { get; set; }
-
         public City POB { get; set; }
         public int? POBId { get; set; }
-
         public City POI { get; set; }
         public int? POIId { get; set; }
-
         public string NationalCode { get; set; }
-
         public string IdNumber { get; set; }
-
         public Gender Gender { get; set; }
         public int? GenderId { get; set; }
-
         public Country Nationality { get; set; }
-
         public DateTime? HireDate { get; set; }
-
         public int? Experience { get; set; }
         public int? MilitaryServiceStatusId { get; set; }
         //public int EducationDegreeId { get; set; }
@@ -44,18 +32,15 @@ namespace SalaryApp.Repositoris.Entities
         public bool MaritalStatus { get; set; }
         //public int? ComplimentaryInsId { get; set; }
         //public int ComplimentaryNumber { get; set; }
-        //public int InsurenceType { get; set; }
-        //public string InsurenceId { get; set; }
+        public Insurance Insurance { get; set; }
+        public int InsuranceId { get; set; }
+        public string InsurenceNumber { get; set; }
         public int? BankName1Id { get; set; }
         public Bank BankName1 { get; set; }
-
         public string BankAccNumber1 { get; set; }
-
         public int? BankName2Id { get; set; }
         public Bank BankName2 { get; set; }
-
         public string BankAccNumber2 { get; set; }
-
         public int Children { get; set; }
         //public int? Education { get; set; }
         public int? Age { get; set; }
