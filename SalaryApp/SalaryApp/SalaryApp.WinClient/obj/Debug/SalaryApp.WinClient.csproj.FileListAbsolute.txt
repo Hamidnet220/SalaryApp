@@ -18,3 +18,4 @@ D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csproj.CopyComplete
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.exe
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.pdb
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.SalaryList.resources

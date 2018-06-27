@@ -41,7 +41,11 @@ namespace SalaryApp.WinClient
             //salary menu
             var salaryMenu =(ToolStripMenuItem) MainMenuStrip.Items.Add("حقوق و دستمزد", null);
 
-            salaryMenu.DropDownItems.Add("ایجاد ماه جدید", null, null);
+            salaryMenu.DropDownItems.Add("لیست های حقوق", null, (obj, e) =>
+            {
+                var view=new Views.Salary.SalaryList();
+                view.ShowDialog();
+            });
 
             
             //report Menu

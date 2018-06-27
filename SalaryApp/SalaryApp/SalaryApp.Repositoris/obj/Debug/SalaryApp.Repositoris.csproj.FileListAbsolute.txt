@@ -35,3 +35,11 @@ D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddWorkplaceTable1.resources
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddCompanyIdAsForeginKeyToWorkplaceTable.resources
 D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddCourceConfiguratinModleBuilder.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddSalaryAndSalaryDetailTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddIsLockedAndSalaryTitleToSalaryTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddSalaryIdToSalaryDetialsTable.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo1.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo11.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo2.resources
+D:\Programing\C#\Project\SalaryAppGithub\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo21.resources

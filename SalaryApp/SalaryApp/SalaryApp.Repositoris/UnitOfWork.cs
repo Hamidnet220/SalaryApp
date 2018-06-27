@@ -11,6 +11,16 @@ namespace SalaryApp.Repositoris
     public class UnitOfWork:IUnitOfWork
     {
         private readonly SalaryAppContext _context;
+
+        public IBankRepository Banks { get; }
+        public ICityRepository Cities { get; }
+        public ICompanyRepository Companies { get; }
+        public IGenderRepository Genders { get; }
+        public IEmployeeRepository Employees { get; }
+        public IWorkplaceRepository Workplaces { get; }
+        public ISalaryRepository Salaries { get; }
+        public ISalaryDetailsRepository SalaryDetails { get; }
+
         public UnitOfWork(SalaryAppContext context)
         {
             _context = context;
@@ -20,22 +30,17 @@ namespace SalaryApp.Repositoris
             Genders=new GenderRepository(_context);
             Employees=new EmployeeRepository(_context);
             Workplaces=new WorkplaceRepository(_context);
-
+            Salaries=new SalaryRepository(_context);
+            SalaryDetails=new SalaryDitailsRepository(_context);
             
         }
+
         public void Dispose()
         {
             _context.Dispose();
         }
 
-        public IBankRepository Banks { get; }
-        public ICityRepository Cities { get; }
-        public ICompanyRepository Companies { get; }
-        public IGenderRepository Genders { get; }
-        public IEmployeeRepository Employees { get; }
-        public IWorkplaceRepository Workplaces { get; }
-       
-         public int Complete()
+        public int Complete()
         {
             return _context.SaveChanges();
         }

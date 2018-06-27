@@ -58,6 +58,8 @@
     <Compile Include="Entities\Gender.cs" />
     <Compile Include="Entities\Insurance.cs" />
     <Compile Include="Entities\MilitaryServiceStatus.cs" />
+    <Compile Include="Entities\Salary.cs" />
+    <Compile Include="Entities\SalaryDetail.cs" />
     <Compile Include="Entities\Workplace.cs" />
     <Compile Include="EntitiyConfiguration\EmployeeConfiguration.cs" />
     <Compile Include="IRepository.cs" />
@@ -141,6 +143,38 @@
     <Compile Include="Migrations\201806260045262_AddCourceConfiguratinModleBuilder.Designer.cs">
       <DependentUpon>201806260045262_AddCourceConfiguratinModleBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806261813547_AddSalaryAndSalaryDetailTable.cs" />
+    <Compile Include="Migrations\201806261813547_AddSalaryAndSalaryDetailTable.Designer.cs">
+      <DependentUpon>201806261813547_AddSalaryAndSalaryDetailTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270142335_AddIsLockedAndSalaryTitleToSalaryTable.cs" />
+    <Compile Include="Migrations\201806270142335_AddIsLockedAndSalaryTitleToSalaryTable.Designer.cs">
+      <DependentUpon>201806270142335_AddIsLockedAndSalaryTitleToSalaryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270223025_AddSalaryIdToSalaryDetialsTable.cs" />
+    <Compile Include="Migrations\201806270223025_AddSalaryIdToSalaryDetialsTable.Designer.cs">
+      <DependentUpon>201806270223025_AddSalaryIdToSalaryDetialsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270236013_foo.cs" />
+    <Compile Include="Migrations\201806270236013_foo.Designer.cs">
+      <DependentUpon>201806270236013_foo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270258595_foo1.cs" />
+    <Compile Include="Migrations\201806270258595_foo1.Designer.cs">
+      <DependentUpon>201806270258595_foo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270301015_foo11.cs" />
+    <Compile Include="Migrations\201806270301015_foo11.Designer.cs">
+      <DependentUpon>201806270301015_foo11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270313387_foo2.cs" />
+    <Compile Include="Migrations\201806270313387_foo2.Designer.cs">
+      <DependentUpon>201806270313387_foo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270314511_foo21.cs" />
+    <Compile Include="Migrations\201806270314511_foo21.Designer.cs">
+      <DependentUpon>201806270314511_foo21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -156,6 +190,8 @@
     <Compile Include="Repositories\EducationRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
+    <Compile Include="Repositories\SalaryDitailsRepository.cs" />
+    <Compile Include="Repositories\SalaryRepository.cs" />
     <Compile Include="Repositories\WorkplaceRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEducationRepository.cs" />
@@ -166,6 +202,8 @@
     <Compile Include="Repository.cs" />
     <Compile Include="RpositoryInterfaces\IBankReopsitory.cs" />
     <Compile Include="RpositoryInterfaces\IGenderRepository.cs" />
+    <Compile Include="RpositoryInterfaces\ISalaryDetailsRepository.cs" />
+    <Compile Include="RpositoryInterfaces\ISalaryRepository.cs" />
     <Compile Include="RpositoryInterfaces\IWorkplaceRepository.cs" />
     <Compile Include="SalaryAppContext.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -243,6 +281,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806260045262_AddCourceConfiguratinModleBuilder.resx">
       <DependentUpon>201806260045262_AddCourceConfiguratinModleBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806261813547_AddSalaryAndSalaryDetailTable.resx">
+      <DependentUpon>201806261813547_AddSalaryAndSalaryDetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270142335_AddIsLockedAndSalaryTitleToSalaryTable.resx">
+      <DependentUpon>201806270142335_AddIsLockedAndSalaryTitleToSalaryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270223025_AddSalaryIdToSalaryDetialsTable.resx">
+      <DependentUpon>201806270223025_AddSalaryIdToSalaryDetialsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270236013_foo.resx">
+      <DependentUpon>201806270236013_foo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270258595_foo1.resx">
+      <DependentUpon>201806270258595_foo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270301015_foo11.resx">
+      <DependentUpon>201806270301015_foo11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270313387_foo2.resx">
+      <DependentUpon>201806270313387_foo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270314511_foo21.resx">
+      <DependentUpon>201806270314511_foo21.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

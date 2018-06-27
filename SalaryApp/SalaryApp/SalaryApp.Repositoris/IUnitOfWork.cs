@@ -10,6 +10,8 @@ namespace SalaryApp.Repositoris
         ICityRepository Cities { get; }
         IGenderRepository Genders { get; }
         IEmployeeRepository Employees { get; }
+        IWorkplaceRepository Workplaces { get; }
+        ISalaryRepository Salaries { get; }
         
         int Complete();
     }

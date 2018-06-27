@@ -22,6 +22,8 @@ namespace SalaryApp.Repositoris
         public virtual DbSet<Education> Educations { get; set; }
         public virtual DbSet<MilitaryServiceStatus> MilitaryServiceStatus { get; set; }
         public virtual DbSet<Workplace> Workplaces { get; set; }
+        public virtual DbSet<Salary> Salaries { get; set; }
+        public virtual DbSet<SalaryDetail> SalaryDetails { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
