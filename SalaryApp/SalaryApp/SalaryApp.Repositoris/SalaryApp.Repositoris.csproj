@@ -187,6 +187,22 @@
     <Compile Include="Migrations\201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.Designer.cs">
       <DependentUpon>201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806280117185_AddMilitartyServiceStatusToEmlpoyeeTable.cs" />
+    <Compile Include="Migrations\201806280117185_AddMilitartyServiceStatusToEmlpoyeeTable.Designer.cs">
+      <DependentUpon>201806280117185_AddMilitartyServiceStatusToEmlpoyeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806280419326_MakeBanksPropertyToVirtualInEmployeeTable.cs" />
+    <Compile Include="Migrations\201806280419326_MakeBanksPropertyToVirtualInEmployeeTable.Designer.cs">
+      <DependentUpon>201806280419326_MakeBanksPropertyToVirtualInEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806280435243_ChangeBankName1IdToBank_IdEmployeeTable.cs" />
+    <Compile Include="Migrations\201806280435243_ChangeBankName1IdToBank_IdEmployeeTable.Designer.cs">
+      <DependentUpon>201806280435243_ChangeBankName1IdToBank_IdEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806281616282_UndoBankIdNameInEmployeeTable.cs" />
+    <Compile Include="Migrations\201806281616282_UndoBankIdNameInEmployeeTable.Designer.cs">
+      <DependentUpon>201806281616282_UndoBankIdNameInEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -326,6 +342,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.resx">
       <DependentUpon>201806270936035_AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280117185_AddMilitartyServiceStatusToEmlpoyeeTable.resx">
+      <DependentUpon>201806280117185_AddMilitartyServiceStatusToEmlpoyeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280419326_MakeBanksPropertyToVirtualInEmployeeTable.resx">
+      <DependentUpon>201806280419326_MakeBanksPropertyToVirtualInEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280435243_ChangeBankName1IdToBank_IdEmployeeTable.resx">
+      <DependentUpon>201806280435243_ChangeBankName1IdToBank_IdEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806281616282_UndoBankIdNameInEmployeeTable.resx">
+      <DependentUpon>201806281616282_UndoBankIdNameInEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

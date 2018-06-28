@@ -25,7 +25,17 @@ namespace SalaryApp.WinClient.Views.Employees
 
         protected override void OnLoad(EventArgs e)
         {
-            grid = new GridControl<Employee>(unitOfWork.Employees.GetAll().ToList());
+            var employees = unitOfWork.Employees.GetAll().ToList();
+            foreach (var emp in employees)
+            {
+                if (!emp.BankName1Id.HasValue)
+                    continue;
+                var bank = unitOfWork.Banks.GetById(emp.BankName1Id.Value).FirstOrDefault();
+                emp.BankName1.Title = bank.Title;
+                emp.BankName1.Id = emp.BankName1Id.Value;
+            }
+
+            grid = new GridControl<Employee>(employees);
             grid.AddColumn("نام", emp => emp.FirstName);
             grid.AddColumn("نام خانوادگی", emp => emp.LastName);
             grid.AddColumn("نام پدر", emp => emp.FatherName);
@@ -36,9 +46,12 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.AddColumn("تاریخ صدور", emp => emp.DOB);
             grid.AddColumn("محل صدر", emp => emp.POIId);
             grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
-            grid.AddColumn("نام بانک", emp => emp.LastName);
+            grid.AddColumn("نام بانک", emp => emp.BankName1.Title);
             grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-
+            grid.AddColumn("وضغیت خدمت", emp => emp.MilitaryServiceStatus.Title);
+            grid.AddColumn("شماره بیمه", emp => emp.Insurance.Title);
+            grid.AddColumn("تعداد فرزند", emp => emp.Children);
+            grid.AddColumn("وضعیت کار", emp => emp.IsWorking);
             this.Controls.Add(grid);
             base.OnLoad(e);
         }

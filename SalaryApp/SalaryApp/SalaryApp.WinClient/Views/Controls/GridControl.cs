@@ -45,7 +45,7 @@ namespace SalaryApp.WinClient.Views.Controls
 
         //Add Column to DataGrid Method
         public  GridControl<TEntity> AddColumn<TProperty>(string columnName,
-            Expression<Func<TEntity, TProperty>> selector)
+            Expression<Func<TEntity, TProperty>> selector )
         {
             var visitor = new ExperssionHandler();
             this.Columns.Add(new DataGridViewTextBoxColumn

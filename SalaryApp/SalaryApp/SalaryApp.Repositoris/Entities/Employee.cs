@@ -25,6 +25,7 @@ namespace SalaryApp.Repositoris.Entities
         public Country Nationality { get; set; }
         public DateTime? HireDate { get; set; }
         public int? Experience { get; set; }
+        public MilitaryServiceStatus MilitaryServiceStatus { get; set; }
         public int? MilitaryServiceStatusId { get; set; }
         //public int EducationDegreeId { get; set; }
         public int WorkplaceId { get; set; }

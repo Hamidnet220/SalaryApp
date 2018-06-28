@@ -11,7 +11,6 @@ namespace SalaryApp.WinClient.Views.Employees
     public partial class EmployeeEditor : ViewBase<Employee>
     {
         private readonly Employee _employee;   
-        private readonly UnitOfWork _unitOfWork=new UnitOfWork(new SalaryAppContext());
 
         public EmployeeEditor(Employee employee)
         {
@@ -50,21 +49,21 @@ namespace SalaryApp.WinClient.Views.Employees
 
 
             bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
-                _unitOfWork.Banks.GetAll().ToList(),
+                unitOfWork.Banks.GetAll().ToList(),
                 "نامشخص",
                 b => b.Title,
                 b => b.Id,
                 _employee.BankName1Id);
 
             bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
-                _unitOfWork.Cities.GetAll().ToList(),
+                unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
                 _employee.POBId);
 
             bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
-                _unitOfWork.Cities.GetAll().ToList(),
+                unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
