@@ -203,6 +203,10 @@
     <Compile Include="Migrations\201806281616282_UndoBankIdNameInEmployeeTable.Designer.cs">
       <DependentUpon>201806281616282_UndoBankIdNameInEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806291230095_AddEmployeeToSalaryDetialTable..cs" />
+    <Compile Include="Migrations\201806291230095_AddEmployeeToSalaryDetialTable..Designer.cs">
+      <DependentUpon>201806291230095_AddEmployeeToSalaryDetialTable..cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -354,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806281616282_UndoBankIdNameInEmployeeTable.resx">
       <DependentUpon>201806281616282_UndoBankIdNameInEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806291230095_AddEmployeeToSalaryDetialTable..resx">
+      <DependentUpon>201806291230095_AddEmployeeToSalaryDetialTable..cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -132,6 +132,9 @@
     <EmbeddedResource Include="Views\Employees\EmployeeList.resx">
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salary\SalaryDetails.resx">
+      <DependentUpon>SalaryDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Salary\SalaryList.resx">
       <DependentUpon>SalaryList.cs</DependentUpon>
     </EmbeddedResource>

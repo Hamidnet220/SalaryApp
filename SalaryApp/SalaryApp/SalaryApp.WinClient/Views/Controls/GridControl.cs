@@ -48,13 +48,25 @@ namespace SalaryApp.WinClient.Views.Controls
             Expression<Func<TEntity, TProperty>> selector )
         {
             var visitor = new ExperssionHandler();
+            var col = new DataGridViewTextBoxColumn
+            {
+                HeaderText = columnName,
+                DataPropertyName = visitor.GetPropertyName(selector)
+            };
+            this.Columns.Add(col);
+            return this;
+        }
+
+        public GridControl<TEntity> AddColumn(string columnName,string propetyName)
+        {
+            
+            
             this.Columns.Add(new DataGridViewTextBoxColumn
             {
 
                 HeaderText = columnName,
-                DataPropertyName = visitor.GetPropertyName(selector)
+                DataPropertyName = propetyName
             });
-
             return this;
         }
 

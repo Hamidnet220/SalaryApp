@@ -40,3 +40,4 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClien
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csproj.CopyComplete
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.exe
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.pdb
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.SalaryDetails.resources

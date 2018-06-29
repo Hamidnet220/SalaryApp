@@ -9,7 +9,8 @@ namespace SalaryApp.Repositoris
         public SalaryAppContext()
             : base("name=SalaryAppContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
+
         }
 
         public virtual DbSet<Bank> Banks { get; set; }
@@ -34,7 +35,7 @@ namespace SalaryApp.Repositoris
                 .HasMany(c => c.Workplaces)
                 .WithRequired(w => w.Company)
                 .HasForeignKey(w => w.CompanyId);
-
+           
             base.OnModelCreating(modelBuilder);
         }
     }

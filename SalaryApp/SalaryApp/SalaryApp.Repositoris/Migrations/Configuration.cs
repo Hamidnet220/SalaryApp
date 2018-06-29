@@ -10,6 +10,7 @@ namespace SalaryApp.Repositoris.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            
         }
 
         protected override void Seed(SalaryApp.Repositoris.SalaryAppContext context)

@@ -38,7 +38,8 @@ namespace SalaryApp.WinClient.Views.Salary
 
         private void EmployeesList_Click(object sender, EventArgs e)
         {
-            
+            var salarDetail=new SalaryDetails(grid.CurrentItem);
+            salarDetail.Show();
         }
     }
 }
