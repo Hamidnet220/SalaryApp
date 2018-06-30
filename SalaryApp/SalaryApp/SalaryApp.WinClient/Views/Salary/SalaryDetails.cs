@@ -46,5 +46,12 @@ namespace SalaryApp.WinClient.Views.Salary
 
             base.OnLoad(e);
         }
+
+        private void AddEmployee_Click(object sender, EventArgs e)
+        {
+            var selectEmployeeView=new SelectEmployeeView();
+            selectEmployeeView.ShowDialog();
+
+        }
     }
 }

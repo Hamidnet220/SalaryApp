@@ -57,6 +57,18 @@ namespace SalaryApp.WinClient.Views.Controls
             return this;
         }
 
+        //Add CheckBox Column to DataGrid Method
+        public GridControl<TEntity> AddCheckBox(string columnName)
+        {
+            var checkBox = new DataGridViewCheckBoxColumn
+            {
+                HeaderText = columnName,
+            };
+           
+            this.Columns.Add(checkBox);
+            return this;
+        }
+
         public GridControl<TEntity> AddColumn(string columnName,string propetyName)
         {
             
