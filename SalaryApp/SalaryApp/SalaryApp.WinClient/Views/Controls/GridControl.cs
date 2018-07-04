@@ -98,5 +98,7 @@ namespace SalaryApp.WinClient.Views.Controls
             get { return(TEntity) bindigSource?.Current; }
         }
 
+        
+
     }
 }

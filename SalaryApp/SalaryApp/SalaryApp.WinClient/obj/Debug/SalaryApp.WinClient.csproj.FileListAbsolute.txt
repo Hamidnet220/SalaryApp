@@ -41,3 +41,4 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClien
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.exe
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.pdb
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.SalaryDetails.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.EmployeesList.resources

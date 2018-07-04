@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SalaryApp.Repositoris;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.WinClient.Views.Controls;
 
@@ -15,43 +9,60 @@ namespace SalaryApp.WinClient.Views.Salary
 {
     public partial class SalaryDetails : ViewBase<SalaryDetails>
     {
-        private GridControl<Employee> grid;
-        private Repositoris.Entities.Salary currenList;
-        public SalaryDetails(Repositoris.Entities.Salary currentList )
+        private GridControl<Employee> _grid;
+        private readonly Repositoris.Entities.Salary _currenMonthSalary;
+        private IEnumerable<SalaryDetail> salaryDetails;
+
+
+
+        public SalaryDetails(Repositoris.Entities.Salary currentMonthSalary )
         {
             InitializeComponent();
+
             this.ViewTitle = "لیست پرسنل ماه جاری";
-            this.currenList = currentList;
+
+            this._currenMonthSalary = currentMonthSalary;
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            var salaryDetails = unitOfWork.SalaryDetails.GetAll().Where(s => s.SalaryId == currenList.Id);
-            var employeeList=new List<Employee>();
-            foreach (var item in salaryDetails)
+            salaryDetails = unitOfWork.SalaryDetails.GetSalaryDetails(_currenMonthSalary.Id);
+            var employees=new List<Employee>();
+            foreach (var employee in salaryDetails)
             {
-                employeeList.Add(item.Employee);
+                employees.Add(unitOfWork.Employees.Get(employee.Employee.Id));
             }
-
-            grid = new GridControl<Employee>(employeeList);
-            grid.AddColumn("نام",emp=>emp.FirstName);
-            grid.AddColumn("نام خانوادگی", emp=>emp.LastName);
-            grid.AddColumn("نام پدر", emp => emp.FatherName);
-            grid.AddColumn("کد ملی", emp => emp.NationalCode);
-            grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
-            grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-            this.Controls.Add(grid);
-            grid.BringToFront();
-
+            _grid = new GridControl<Employee>(employees);
+            _grid.AddColumn("نام", emp=>emp.FirstName);
+            _grid.AddColumn("نام خانوادگی", emp=>emp.LastName);
+            _grid.AddColumn("نام پدر", emp => emp.FatherName);
+            _grid.AddColumn("کد ملی", emp => emp.NationalCode);
+            _grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
+            _grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
+            this.Controls.Add(_grid);
+            _grid.BringToFront();
 
             base.OnLoad(e);
         }
 
         private void AddEmployee_Click(object sender, EventArgs e)
         {
-            var selectEmployeeView=new SelectEmployeeView();
-            selectEmployeeView.ShowDialog();
+            var selectEmployeeView=new Views.Salary.EmployeesList(_currenMonthSalary);
+            if (selectEmployeeView.ShowDialog() == DialogResult.OK)
+            {
+                this.OnLoad(e);
+            }
 
+
+        }
+
+        private void DeleteEmployee_Click(object sender, EventArgs e)
+        {
+            if (_grid.CurrentItem==null) return;
+            var currentItem= unitOfWork.SalaryDetails.Find(s=>s.Employee.Id==_grid.CurrentItem.Id).FirstOrDefault();
+            unitOfWork.SalaryDetails.Remove(currentItem);
+            unitOfWork.Complete();
+            _grid.RemoveCurrent();
         }
     }
 }

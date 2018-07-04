@@ -79,6 +79,7 @@
             this.DeleteEmployee.TabIndex = 0;
             this.DeleteEmployee.Text = "حذف";
             this.DeleteEmployee.UseVisualStyleBackColor = true;
+            this.DeleteEmployee.Click += new System.EventHandler(this.DeleteEmployee_Click);
             // 
             // EditEmployee
             // 

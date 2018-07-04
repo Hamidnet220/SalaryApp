@@ -9,5 +9,7 @@ namespace SalaryApp.Repositoris.RpositoryInterfaces
 {
     public interface ISalaryDetailsRepository:IRepository<SalaryDetail>
     {
+        IEnumerable<SalaryDetail> GetBySalaryId(int value);
+        IEnumerable<SalaryDetail> GetSalaryDetails(int value);
     }
 }

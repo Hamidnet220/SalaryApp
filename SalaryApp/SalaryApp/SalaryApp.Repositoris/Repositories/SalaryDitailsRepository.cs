@@ -11,10 +11,23 @@ namespace SalaryApp.Repositoris.Repositories
 {
     public class SalaryDitailsRepository:Repository<SalaryDetail>,ISalaryDetailsRepository
     {
+        private SalaryAppContext SalaryAppContext => (SalaryAppContext)Context;
+
+
         public SalaryDitailsRepository(DbContext context) : base(context)
         {
         }
 
-        private SalaryAppContext SalaryAppContext => (SalaryAppContext)Context;
+        
+        
+        public IEnumerable<SalaryDetail> GetBySalaryId(int value)
+        {
+            return SalaryAppContext.SalaryDetails.Where(s=>s.SalaryId==value).ToList();
+        }
+
+        public IEnumerable<SalaryDetail> GetSalaryDetails(int value)
+        {
+           return SalaryAppContext.SalaryDetails.Where(s => s.SalaryId == value).ToList();
+        }
     }
 }

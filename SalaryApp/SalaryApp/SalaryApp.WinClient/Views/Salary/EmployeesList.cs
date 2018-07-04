@@ -1,23 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public class SelectEmployeeView:ViewBase<Employee>
+    public partial class EmployeesList : ViewBase<Employee>
     {
         private GridControl<Employee> grid;
-        public SelectEmployeeView()
-        {
-            ViewTitle = @"لیست کارکنان";
-            WindowState=FormWindowState.Maximized;
-        }
+        private Repositoris.Entities.Salary salary;
 
+        public EmployeesList(Repositoris.Entities.Salary salary)
+        {
+            InitializeComponent();
+            ViewTitle = @"لیست کارکنان";
+            WindowState = FormWindowState.Maximized;
+            this.salary = salary;
+        }
         protected override void OnLoad(EventArgs e)
         {
             var employeeList = unitOfWork.Employees.GetAll();
@@ -33,6 +32,23 @@ namespace SalaryApp.WinClient.Views.Salary
             this.Controls.Add(grid);
             grid.BringToFront();
             base.OnLoad(e);
+        }
+
+
+        private void AddEmployee_Click(object sender, EventArgs e)
+        {
+
+            foreach (DataGridViewRow row in grid.SelectedRows)
+            {
+                unitOfWork.SalaryDetails.Add(new SalaryDetail
+                {
+                    SalaryId = salary.Id,
+                    Employee = (Employee)row.DataBoundItem
+                });
+            }
+            unitOfWork.Complete();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

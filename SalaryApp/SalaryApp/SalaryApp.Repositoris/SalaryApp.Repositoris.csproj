@@ -207,6 +207,22 @@
     <Compile Include="Migrations\201806291230095_AddEmployeeToSalaryDetialTable..Designer.cs">
       <DependentUpon>201806291230095_AddEmployeeToSalaryDetialTable..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807041415590_AddICollentionEmployeeToSalaryDetialsTable.cs" />
+    <Compile Include="Migrations\201807041415590_AddICollentionEmployeeToSalaryDetialsTable.Designer.cs">
+      <DependentUpon>201807041415590_AddICollentionEmployeeToSalaryDetialsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807041511359_AddEmployeePropertyInSalaryDetials.cs" />
+    <Compile Include="Migrations\201807041511359_AddEmployeePropertyInSalaryDetials.Designer.cs">
+      <DependentUpon>201807041511359_AddEmployeePropertyInSalaryDetials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807041536034_RemoveEmployeePropertySalaryDetails.cs" />
+    <Compile Include="Migrations\201807041536034_RemoveEmployeePropertySalaryDetails.Designer.cs">
+      <DependentUpon>201807041536034_RemoveEmployeePropertySalaryDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807041537299_addEmployeeToSalaryDetails.cs" />
+    <Compile Include="Migrations\201807041537299_addEmployeeToSalaryDetails.Designer.cs">
+      <DependentUpon>201807041537299_addEmployeeToSalaryDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -361,6 +377,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806291230095_AddEmployeeToSalaryDetialTable..resx">
       <DependentUpon>201806291230095_AddEmployeeToSalaryDetialTable..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807041415590_AddICollentionEmployeeToSalaryDetialsTable.resx">
+      <DependentUpon>201807041415590_AddICollentionEmployeeToSalaryDetialsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807041511359_AddEmployeePropertyInSalaryDetials.resx">
+      <DependentUpon>201807041511359_AddEmployeePropertyInSalaryDetials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807041536034_RemoveEmployeePropertySalaryDetails.resx">
+      <DependentUpon>201807041536034_RemoveEmployeePropertySalaryDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807041537299_addEmployeeToSalaryDetails.resx">
+      <DependentUpon>201807041537299_addEmployeeToSalaryDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -90,6 +90,12 @@
       <DependentUpon>EmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Employees\ExperssionHandler.cs" />
+    <Compile Include="Views\Salary\EmployeesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salary\EmployeesList.Designer.cs">
+      <DependentUpon>EmployeesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Salary\SalaryDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +107,6 @@
     </Compile>
     <Compile Include="Views\Salary\SalaryList.Designer.cs">
       <DependentUpon>SalaryList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Salary\SelectEmployeeView.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Workplace\WorkplaceEditor.cs">
       <SubType>Form</SubType>
@@ -134,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Employees\EmployeeList.resx">
       <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salary\EmployeesList.resx">
+      <DependentUpon>EmployeesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Salary\SalaryDetails.resx">
       <DependentUpon>SalaryDetails.cs</DependentUpon>
