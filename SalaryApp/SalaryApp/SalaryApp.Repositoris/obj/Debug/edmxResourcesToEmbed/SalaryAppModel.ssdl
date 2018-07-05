@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalaryAppContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Banks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateByUserId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="DeletedByUserID" Type="int" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Educations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FatherName" Type="nvarchar(max)" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="NationalCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="IdNumber" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="HireDate" Type="datetime" />
+    <Property Name="Experience" Type="int" />
+    <Property Name="Nationality_Id" Type="int" />
+    <Property Name="BankAccNumber1" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankAccNumber2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Children" Type="int" Nullable="false" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Mobile" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="IsWorking" Type="bit" Nullable="false" />
+    <Property Name="BankName1Id" Type="int" />
+    <Property Name="BankName2Id" Type="int" />
+    <Property Name="POBId" Type="int" />
+    <Property Name="POIId" Type="int" />
+    <Property Name="GenderId" Type="int" />
+    <Property Name="MaritalStatus" Type="bit" Nullable="false" />
+    <Property Name="WorkplaceId" Type="int" Nullable="false" />
+    <Property Name="MilitaryServiceStatusId" Type="int" />
+    <Property Name="InsurenceNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="InsuranceId" Type="int" />
+    <Property Name="GroupId" Type="int" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="WorkplaceId" Type="int" />
+  </EntityType>
+  <EntityType Name="Insurances">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MilitaryServiceStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Salaries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="WorkplaceId" Type="int" Nullable="false" />
+    <Property Name="Month" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="EmployeesCount" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsLocked" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalaryDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GrossAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SalaryId" Type="int" Nullable="false" />
+    <Property Name="Employee_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Workplaces">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="IsAcitve" Type="bit" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="EmployerTitle" Type="nvarchar(max)" />
+    <Property Name="ContractNumber" Type="nvarchar(max)" />
+    <Property Name="ContractPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="IsClosed" Type="bit" Nullable="false" />
+    <Property Name="Tel" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreateByUserId" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="DeletedDate" Type="datetime" />
+    <Property Name="DeletedByUserID" Type="int" />
+    <Property Name="InsuranceCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_dbo_Employees_dbo_Banks_BankName1_Id">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="BankName1Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Banks_BankName2_Id">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="BankName2Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Cities_POBId">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="POBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Cities_POIId">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="POIId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Countries_Nationality_Id">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="Nationality_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Genders_GenderId">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Groups_GroupId">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_Insurances_InsuranceId">
+    <End Role="Insurances" Type="Self.Insurances" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Insurances">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="InsuranceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Employees_dbo_MilitaryServiceStatus_MilitaryServiceStatusId">
+    <End Role="MilitaryServiceStatus" Type="Self.MilitaryServiceStatus" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MilitaryServiceStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="MilitaryServiceStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Groups_dbo_Workplaces_WorkplaceId">
+    <End Role="Workplaces" Type="Self.Workplaces" Multiplicity="0..1" />
+    <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workplaces">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Groups">
+        <PropertyRef Name="WorkplaceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Salaries_dbo_Companies_CompanyId">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Salaries" Type="Self.Salaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Salaries">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Salaries_dbo_Workplaces_WorkplaceId">
+    <End Role="Workplaces" Type="Self.Workplaces" Multiplicity="1" />
+    <End Role="Salaries" Type="Self.Salaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workplaces">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Salaries">
+        <PropertyRef Name="WorkplaceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SalaryDetails_dbo_Employees_Employee_Id">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="SalaryDetails" Type="Self.SalaryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SalaryDetails">
+        <PropertyRef Name="Employee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SalaryDetails_dbo_Salaries_SalaryId">
+    <End Role="Salaries" Type="Self.Salaries" Multiplicity="1" />
+    <End Role="SalaryDetails" Type="Self.SalaryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salaries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SalaryDetails">
+        <PropertyRef Name="SalaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Workplaces_dbo_Companies_CompanyId">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Workplaces" Type="Self.Workplaces" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Workplaces">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SalaryAppContextModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Educations" EntityType="Self.Educations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genders" EntityType="Self.Genders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Insurances" EntityType="Self.Insurances" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MilitaryServiceStatus" EntityType="Self.MilitaryServiceStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salaries" EntityType="Self.Salaries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalaryDetails" EntityType="Self.SalaryDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workplaces" EntityType="Self.Workplaces" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Employees_dbo_Banks_BankName1_Id" Association="Self.FK_dbo_Employees_dbo_Banks_BankName1_Id">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Banks_BankName2_Id" Association="Self.FK_dbo_Employees_dbo_Banks_BankName2_Id">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Cities_POBId" Association="Self.FK_dbo_Employees_dbo_Cities_POBId">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Cities_POIId" Association="Self.FK_dbo_Employees_dbo_Cities_POIId">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Countries_Nationality_Id" Association="Self.FK_dbo_Employees_dbo_Countries_Nationality_Id">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Genders_GenderId" Association="Self.FK_dbo_Employees_dbo_Genders_GenderId">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Groups_GroupId" Association="Self.FK_dbo_Employees_dbo_Groups_GroupId">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_Insurances_InsuranceId" Association="Self.FK_dbo_Employees_dbo_Insurances_InsuranceId">
+      <End Role="Insurances" EntitySet="Insurances" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Employees_dbo_MilitaryServiceStatus_MilitaryServiceStatusId" Association="Self.FK_dbo_Employees_dbo_MilitaryServiceStatus_MilitaryServiceStatusId">
+      <End Role="MilitaryServiceStatus" EntitySet="MilitaryServiceStatus" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Groups_dbo_Workplaces_WorkplaceId" Association="Self.FK_dbo_Groups_dbo_Workplaces_WorkplaceId">
+      <End Role="Workplaces" EntitySet="Workplaces" />
+      <End Role="Groups" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Salaries_dbo_Companies_CompanyId" Association="Self.FK_dbo_Salaries_dbo_Companies_CompanyId">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Salaries" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Salaries_dbo_Workplaces_WorkplaceId" Association="Self.FK_dbo_Salaries_dbo_Workplaces_WorkplaceId">
+      <End Role="Workplaces" EntitySet="Workplaces" />
+      <End Role="Salaries" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SalaryDetails_dbo_Employees_Employee_Id" Association="Self.FK_dbo_SalaryDetails_dbo_Employees_Employee_Id">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="SalaryDetails" EntitySet="SalaryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SalaryDetails_dbo_Salaries_SalaryId" Association="Self.FK_dbo_SalaryDetails_dbo_Salaries_SalaryId">
+      <End Role="Salaries" EntitySet="Salaries" />
+      <End Role="SalaryDetails" EntitySet="SalaryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Workplaces_dbo_Companies_CompanyId" Association="Self.FK_dbo_Workplaces_dbo_Companies_CompanyId">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Workplaces" EntitySet="Workplaces" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

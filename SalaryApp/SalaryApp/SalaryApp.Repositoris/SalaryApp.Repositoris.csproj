@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +58,7 @@
     <Compile Include="Entities\Education.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Insurance.cs" />
     <Compile Include="Entities\MilitaryServiceStatus.cs" />
     <Compile Include="Entities\Salary.cs" />
@@ -222,6 +225,30 @@
     <Compile Include="Migrations\201807041537299_addEmployeeToSalaryDetails.cs" />
     <Compile Include="Migrations\201807041537299_addEmployeeToSalaryDetails.Designer.cs">
       <DependentUpon>201807041537299_addEmployeeToSalaryDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807050836384_AddGroupTable.cs" />
+    <Compile Include="Migrations\201807050836384_AddGroupTable.Designer.cs">
+      <DependentUpon>201807050836384_AddGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807050840018_AddCollectionOfGroupInWorkplaceTable.cs" />
+    <Compile Include="Migrations\201807050840018_AddCollectionOfGroupInWorkplaceTable.Designer.cs">
+      <DependentUpon>201807050840018_AddCollectionOfGroupInWorkplaceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807050847000_AddICollectionOfEmployeeInGroupTable.cs" />
+    <Compile Include="Migrations\201807050847000_AddICollectionOfEmployeeInGroupTable.Designer.cs">
+      <DependentUpon>201807050847000_AddICollectionOfEmployeeInGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051307555_addForeginKeyGroupIdToEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051307555_addForeginKeyGroupIdToEmployeeTable.Designer.cs">
+      <DependentUpon>201807051307555_addForeginKeyGroupIdToEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051322272_AddGroupIdToEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051322272_AddGroupIdToEmployeeTable.Designer.cs">
+      <DependentUpon>201807051322272_AddGroupIdToEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051334191_foo3.cs" />
+    <Compile Include="Migrations\201807051334191_foo3.Designer.cs">
+      <DependentUpon>201807051334191_foo3.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
@@ -390,10 +417,31 @@
     <EmbeddedResource Include="Migrations\201807041537299_addEmployeeToSalaryDetails.resx">
       <DependentUpon>201807041537299_addEmployeeToSalaryDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807050836384_AddGroupTable.resx">
+      <DependentUpon>201807050836384_AddGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807050840018_AddCollectionOfGroupInWorkplaceTable.resx">
+      <DependentUpon>201807050840018_AddCollectionOfGroupInWorkplaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807050847000_AddICollectionOfEmployeeInGroupTable.resx">
+      <DependentUpon>201807050847000_AddICollectionOfEmployeeInGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051307555_addForeginKeyGroupIdToEmployeeTable.resx">
+      <DependentUpon>201807051307555_addForeginKeyGroupIdToEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051322272_AddGroupIdToEmployeeTable.resx">
+      <DependentUpon>201807051322272_AddGroupIdToEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051334191_foo3.resx">
+      <DependentUpon>201807051334191_foo3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlScripts\Cities.sql" />
     <Content Include="SqlScripts\Countries.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

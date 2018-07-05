@@ -103,3 +103,9 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Reposito
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddEmployeePropertyInSalaryDetials.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemoveEmployeePropertySalaryDetails.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.addEmployeeToSalaryDetails.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddGroupTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddCollectionOfGroupInWorkplaceTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddICollectionOfEmployeeInGroupTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.addForeginKeyGroupIdToEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddGroupIdToEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo3.resources

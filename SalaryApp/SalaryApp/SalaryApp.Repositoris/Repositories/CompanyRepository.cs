@@ -65,7 +65,7 @@ namespace SalaryApp.Repositoris.Repositories
 
         public IEnumerable<Company> GetByDeletedByUserID(int? value)
         {
-            return SalaryAppContext.Companies.Where(c=>c.DeletedByUserID==value);
+            return SalaryAppContext.Companies.Where(c=>c.DeletedByUserId==value);
         }
     }
 }

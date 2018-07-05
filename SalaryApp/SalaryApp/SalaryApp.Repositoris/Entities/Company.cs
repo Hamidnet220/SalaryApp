@@ -15,7 +15,7 @@ namespace SalaryApp.Repositoris.Entities
         public int CreateByUserId {get;set;}
         public bool IsDeleted {get;set;}
         public DateTime? DeletedDate {get;set;}
-        public int? DeletedByUserID {get;set;}
+        public int? DeletedByUserId {get;set;}
 
         public virtual ICollection<Workplace> Workplaces { get; set; }
     }
