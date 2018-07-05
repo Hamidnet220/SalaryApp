@@ -294,6 +294,22 @@
     <Compile Include="Migrations\201807051631275_ModifyEmployeeTable.Designer.cs">
       <DependentUpon>201807051631275_ModifyEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807051644159_ModifyEmployee.cs" />
+    <Compile Include="Migrations\201807051644159_ModifyEmployee.Designer.cs">
+      <DependentUpon>201807051644159_ModifyEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051654263_AddTaxtGroupAndInsuranceGroupEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051654263_AddTaxtGroupAndInsuranceGroupEmployeeTable.Designer.cs">
+      <DependentUpon>201807051654263_AddTaxtGroupAndInsuranceGroupEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051658035_RemoveCountyNavigatorOfEmployee.cs" />
+    <Compile Include="Migrations\201807051658035_RemoveCountyNavigatorOfEmployee.Designer.cs">
+      <DependentUpon>201807051658035_RemoveCountyNavigatorOfEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051701095_RenameNationalityToCountyEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051701095_RenameNationalityToCountyEmployeeTable.Designer.cs">
+      <DependentUpon>201807051701095_RenameNationalityToCountyEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -508,6 +524,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807051631275_ModifyEmployeeTable.resx">
       <DependentUpon>201807051631275_ModifyEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051644159_ModifyEmployee.resx">
+      <DependentUpon>201807051644159_ModifyEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051654263_AddTaxtGroupAndInsuranceGroupEmployeeTable.resx">
+      <DependentUpon>201807051654263_AddTaxtGroupAndInsuranceGroupEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051658035_RemoveCountyNavigatorOfEmployee.resx">
+      <DependentUpon>201807051658035_RemoveCountyNavigatorOfEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051701095_RenameNationalityToCountyEmployeeTable.resx">
+      <DependentUpon>201807051701095_RenameNationalityToCountyEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

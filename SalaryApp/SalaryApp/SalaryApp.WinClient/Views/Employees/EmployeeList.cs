@@ -40,13 +40,11 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.AddColumn("کد ملی", emp => emp.NationalCode);
             grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
             grid.AddColumn("تاریخ تولد ", emp => emp.DOB);
-            grid.AddColumn("محل تولد", emp => emp.POIId);
+            grid.AddColumn("محل تولد", emp => emp.POI);
             grid.AddColumn("تاریخ صدور", emp => emp.DOB);
-            grid.AddColumn("محل صدر", emp => emp.POIId);
+            grid.AddColumn("محل صدر", emp => emp.POI);
             grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
             grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-            grid.AddColumn("وضغیت خدمت", emp => emp.MilitaryServiceStatus.Title);
-            grid.AddColumn("شماره بیمه", emp => emp.Insurance.Title);
             grid.AddColumn("تعداد فرزند", emp => emp.Children);
             grid.AddColumn("وضعیت کار", emp => emp.IsWorking);
             this.Controls.Add(grid);

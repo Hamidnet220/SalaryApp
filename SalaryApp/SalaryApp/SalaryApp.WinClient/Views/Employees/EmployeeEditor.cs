@@ -60,14 +60,14 @@ namespace SalaryApp.WinClient.Views.Employees
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
-                _employee.POBId);
+                _employee.POB);
 
             bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
                 unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
-                _employee.POIId);
+                _employee.POI);
         }
     }
 }

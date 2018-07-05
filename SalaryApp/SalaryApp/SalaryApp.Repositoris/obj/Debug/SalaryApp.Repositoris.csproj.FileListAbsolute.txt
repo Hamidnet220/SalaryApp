@@ -119,3 +119,7 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Reposito
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemovePOBfromEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemoveCityfromeEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifyEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifyEmployee.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddTaxtGroupAndInsuranceGroupEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemoveCountyNavigatorOfEmployee.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RenameNationalityToCountyEmployeeTable.resources
