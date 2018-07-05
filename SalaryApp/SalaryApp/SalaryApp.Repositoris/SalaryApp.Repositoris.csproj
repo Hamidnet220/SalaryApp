@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Attendance.cs" />
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\Education.cs" />
@@ -60,9 +61,12 @@
     <Compile Include="Entities\Gender.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Insurance.cs" />
+    <Compile Include="Entities\InsuranceGroup.cs" />
     <Compile Include="Entities\MilitaryServiceStatus.cs" />
     <Compile Include="Entities\Salary.cs" />
     <Compile Include="Entities\SalaryDetail.cs" />
+    <Compile Include="Entities\Shift.cs" />
+    <Compile Include="Entities\TaxGroup.cs" />
     <Compile Include="Entities\Workplace.cs" />
     <Compile Include="EntitiyConfiguration\EmployeeConfiguration.cs" />
     <Compile Include="IRepository.cs" />
@@ -250,6 +254,46 @@
     <Compile Include="Migrations\201807051334191_foo3.Designer.cs">
       <DependentUpon>201807051334191_foo3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807051412010_addTaxGroupTable.cs" />
+    <Compile Include="Migrations\201807051412010_addTaxGroupTable.Designer.cs">
+      <DependentUpon>201807051412010_addTaxGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051416097_ModifiyTaxGroupTable.cs" />
+    <Compile Include="Migrations\201807051416097_ModifiyTaxGroupTable.Designer.cs">
+      <DependentUpon>201807051416097_ModifiyTaxGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051420366_ModifiyTaxtFreeAmountTaxGroup.cs" />
+    <Compile Include="Migrations\201807051420366_ModifiyTaxtFreeAmountTaxGroup.Designer.cs">
+      <DependentUpon>201807051420366_ModifiyTaxtFreeAmountTaxGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051432481_AddInsuranceGroupTable.cs" />
+    <Compile Include="Migrations\201807051432481_AddInsuranceGroupTable.Designer.cs">
+      <DependentUpon>201807051432481_AddInsuranceGroupTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051439010_modifySalaryTable.cs" />
+    <Compile Include="Migrations\201807051439010_modifySalaryTable.Designer.cs">
+      <DependentUpon>201807051439010_modifySalaryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051552326_addShiftandAttendanceTables.cs" />
+    <Compile Include="Migrations\201807051552326_addShiftandAttendanceTables.Designer.cs">
+      <DependentUpon>201807051552326_addShiftandAttendanceTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051606496_ModifyAttencanceTable.cs" />
+    <Compile Include="Migrations\201807051606496_ModifyAttencanceTable.Designer.cs">
+      <DependentUpon>201807051606496_ModifyAttencanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051625179_RemovePOBfromEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051625179_RemovePOBfromEmployeeTable.Designer.cs">
+      <DependentUpon>201807051625179_RemovePOBfromEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051627265_RemoveCityfromeEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051627265_RemoveCityfromeEmployeeTable.Designer.cs">
+      <DependentUpon>201807051627265_RemoveCityfromeEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807051631275_ModifyEmployeeTable.cs" />
+    <Compile Include="Migrations\201807051631275_ModifyEmployeeTable.Designer.cs">
+      <DependentUpon>201807051631275_ModifyEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -434,6 +478,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807051334191_foo3.resx">
       <DependentUpon>201807051334191_foo3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051412010_addTaxGroupTable.resx">
+      <DependentUpon>201807051412010_addTaxGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051416097_ModifiyTaxGroupTable.resx">
+      <DependentUpon>201807051416097_ModifiyTaxGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051420366_ModifiyTaxtFreeAmountTaxGroup.resx">
+      <DependentUpon>201807051420366_ModifiyTaxtFreeAmountTaxGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051432481_AddInsuranceGroupTable.resx">
+      <DependentUpon>201807051432481_AddInsuranceGroupTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051439010_modifySalaryTable.resx">
+      <DependentUpon>201807051439010_modifySalaryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051552326_addShiftandAttendanceTables.resx">
+      <DependentUpon>201807051552326_addShiftandAttendanceTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051606496_ModifyAttencanceTable.resx">
+      <DependentUpon>201807051606496_ModifyAttencanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051625179_RemovePOBfromEmployeeTable.resx">
+      <DependentUpon>201807051625179_RemovePOBfromEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051627265_RemoveCityfromeEmployeeTable.resx">
+      <DependentUpon>201807051627265_RemoveCityfromeEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807051631275_ModifyEmployeeTable.resx">
+      <DependentUpon>201807051631275_ModifyEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

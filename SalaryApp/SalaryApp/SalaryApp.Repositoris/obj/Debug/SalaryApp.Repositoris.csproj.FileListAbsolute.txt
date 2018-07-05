@@ -109,3 +109,13 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Reposito
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.addForeginKeyGroupIdToEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddGroupIdToEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo3.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.addTaxGroupTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifiyTaxGroupTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifiyTaxtFreeAmountTaxGroup.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddInsuranceGroupTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.modifySalaryTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.addShiftandAttendanceTables.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifyAttencanceTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemovePOBfromEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RemoveCityfromeEmployeeTable.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ModifyEmployeeTable.resources

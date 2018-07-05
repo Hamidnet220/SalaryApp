@@ -26,6 +26,10 @@ namespace SalaryApp.Repositoris
         public virtual DbSet<Salary> Salaries { get; set; }
         public virtual DbSet<SalaryDetail> SalaryDetails { get; set; }
         public virtual DbSet<Group> Groups { get; set; }
+        public virtual DbSet<TaxGroup> TaxGroups { get; set; }
+        public virtual DbSet<InsuranceGroup> InsuranceGroups { get; set; }
+        public virtual DbSet<Shift> Shifts { get; set; }
+        public virtual DbSet<Attendance> Attendances { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

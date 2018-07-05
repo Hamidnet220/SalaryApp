@@ -31,8 +31,6 @@ namespace SalaryApp.WinClient.Views.Employees
                 if (!emp.BankName1Id.HasValue)
                     continue;
                 var bank = unitOfWork.Banks.GetById(emp.BankName1Id.Value).FirstOrDefault();
-                emp.BankName1.Title = bank.Title;
-                emp.BankName1.Id = emp.BankName1Id.Value;
             }
 
             grid = new GridControl<Employee>(employees);
@@ -46,7 +44,6 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.AddColumn("تاریخ صدور", emp => emp.DOB);
             grid.AddColumn("محل صدر", emp => emp.POIId);
             grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
-            grid.AddColumn("نام بانک", emp => emp.BankName1.Title);
             grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
             grid.AddColumn("وضغیت خدمت", emp => emp.MilitaryServiceStatus.Title);
             grid.AddColumn("شماره بیمه", emp => emp.Insurance.Title);
