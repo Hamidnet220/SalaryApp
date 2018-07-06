@@ -96,17 +96,20 @@
       <DependentUpon>List.cs</DependentUpon>
     </Compile>
     <Compile Include="ExperssionHandler.cs" />
-    <Compile Include="Views\Salary\EmployeesList.cs">
+    <Compile Include="Views\SalaryDetails\EmployeesList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Salary\EmployeesList.Designer.cs">
+    <Compile Include="Views\SalaryDetails\EmployeesList.Designer.cs">
       <DependentUpon>EmployeesList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Salary\SalaryDetails.cs">
+    <Compile Include="Views\SalaryDetails\List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Salary\SalaryDetails.Designer.cs">
-      <DependentUpon>SalaryDetails.cs</DependentUpon>
+    <Compile Include="Views\SalaryDetails\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salary\Editor.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Salary\List.cs">
       <SubType>Form</SubType>
@@ -150,11 +153,14 @@
     <EmbeddedResource Include="Views\Employees\List.resx">
       <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Salary\EmployeesList.resx">
+    <EmbeddedResource Include="Views\SalaryDetails\EmployeesList.resx">
       <DependentUpon>EmployeesList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Salary\SalaryDetails.resx">
-      <DependentUpon>SalaryDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Views\SalaryDetails\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salary\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Salary\List.resx">
       <DependentUpon>List.cs</DependentUpon>

@@ -1,4 +1,4 @@
-﻿namespace SalaryApp.WinClient.Views.Salary
+﻿namespace SalaryApp.WinClient.Views.SalaryDetails
 {
     partial class EmployeesList
     {

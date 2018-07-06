@@ -30,7 +30,7 @@ namespace SalaryApp.WinClient.Views.Salary
 
         private void EmployeesList_Click(object sender, EventArgs e)
         {
-            var salarDetail=new SalaryDetails(_grid.CurrentItem);
+            var salarDetail=new SalaryDetails.List(_grid.CurrentItem);
             salarDetail.Show();
         }
     }

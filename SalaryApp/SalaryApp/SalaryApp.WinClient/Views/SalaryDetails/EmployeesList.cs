@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.WinClient.Views.Controls;
 
-namespace SalaryApp.WinClient.Views.Salary
+namespace SalaryApp.WinClient.Views.SalaryDetails
 {
     public partial class EmployeesList : ViewBase<Employee>
     {

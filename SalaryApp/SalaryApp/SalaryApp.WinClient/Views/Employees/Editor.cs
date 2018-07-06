@@ -1,83 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Windows.Forms;
-using SalaryApp.Repositoris;
 using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
     public partial class Editor : ViewBase<Employee>
     {
-        private readonly Employee _employee;   
+        private readonly Employee employee;   
 
         public Editor(Employee employee)
         {
-            _employee = employee;
-
             InitializeComponent();
-          
-
-            this.WindowState=FormWindowState.Maximized;
+            this.employee = employee;
+            WindowState=FormWindowState.Maximized;
             BankNameComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             POBComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             POIComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
 
-            Load += EmployeeEditor_Load;
         }
 
-        private void EmployeeEditor_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
-            InitialFormDataBinding();
-        }
-
-
-        protected override string ViewTitle
-        {
-            get { return "ویرایش اطلاعات کارکنان"; }
-        }
-
-        private void InitialFormDataBinding()
-        {
-            var bindingTools = new BindingTools<Employee>(_employee);
+            var bindingTools = new BindingTools<Employee>(employee);
 
             bindingTools.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
             bindingTools.BindTextBox(LastNameTextBox, emp => emp.LastName);
             bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
             bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
             bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
-            bindingTools.BindTextBox(Account1TextBox,emp=>emp.BankAccNumber1);
-            bindingTools.BindMaskTextBox(DateOfBorn,emp=>emp.DOB);
-
+            bindingTools.BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
+            bindingTools.BindMaskTextBox(DateOfBorn, emp => emp.DOB);
 
             bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
                 unitOfWork.Banks.GetAll().ToList(),
                 "نامشخص",
                 b => b.Title,
                 b => b.Id,
-                _employee.BankName1Id);
+                employee.BankName1Id);
 
             bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
                 unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
-                _employee.POB);
+                employee.POB);
 
             bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
                 unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
                 c => c.Id,
-                _employee.POI);
+                employee.POI);
 
-            bindingTools.BindComboBox<int?,Country, Employee>(CountryComboBox,
+            bindingTools.BindComboBox<int?, Country, Employee>(CountryComboBox,
                 unitOfWork.Countries.GetAll().ToList(),
                 "نامشخص",
                 c => c.Title,
                 c => c.Id,
-                _employee.POI);
+                employee.POI);
+
+            base.OnLoad(e);
+
         }
+
+        protected override string ViewTitle
+        {
+            get { return "ویرایش اطلاعات کارکنان"; }
+        }
+
     }
 }

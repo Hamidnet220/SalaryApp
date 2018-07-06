@@ -5,9 +5,9 @@ using System.Windows.Forms;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.WinClient.Views.Controls;
 
-namespace SalaryApp.WinClient.Views.Salary
+namespace SalaryApp.WinClient.Views.SalaryDetails
 {
-    public partial class SalaryDetails : ViewBase<SalaryDetails>
+    public partial class List : ViewBase<List>
     {
         private GridControl<Employee> _grid;
         private readonly Repositoris.Entities.Salary _currenMonthSalary;
@@ -15,7 +15,7 @@ namespace SalaryApp.WinClient.Views.Salary
 
 
 
-        public SalaryDetails(Repositoris.Entities.Salary currentMonthSalary )
+        public List(Repositoris.Entities.Salary currentMonthSalary )
         {
             InitializeComponent();
 
@@ -47,7 +47,7 @@ namespace SalaryApp.WinClient.Views.Salary
 
         private void AddEmployee_Click(object sender, EventArgs e)
         {
-            var selectEmployeeView=new Views.Salary.EmployeesList(_currenMonthSalary);
+            var selectEmployeeView=new EmployeesList(_currenMonthSalary);
             if (selectEmployeeView.ShowDialog() == DialogResult.OK)
             {
                 this.OnLoad(e);
