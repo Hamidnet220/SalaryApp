@@ -14,6 +14,7 @@ namespace SalaryApp.Repositoris
 
         public IBankRepository Banks { get; }
         public ICityRepository Cities { get; }
+        public ICountryRepository Countries { get; }
         public ICompanyRepository Companies { get; }
         public IGenderRepository Genders { get; }
         public IEmployeeRepository Employees { get; }
@@ -26,6 +27,7 @@ namespace SalaryApp.Repositoris
             _context = context;
             Banks=new BankRepository(_context);
             Cities=new CityRepository(_context);
+            Countries=new CountryRepository(_context);
             Companies=new CompanyRepository(_context);
             Genders=new GenderRepository(_context);
             Employees=new EmployeeRepository(_context);

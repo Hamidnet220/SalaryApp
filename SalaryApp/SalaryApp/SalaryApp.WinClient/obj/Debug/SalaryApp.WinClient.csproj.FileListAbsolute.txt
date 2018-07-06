@@ -32,9 +32,6 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClien
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csprojAssemblyReference.cache
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.MainForm.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Properties.Resources.resources
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Employees.EmployeeEditor.resources
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Employees.EmployeeList.resources
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.SalaryList.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csproj.GenerateResource.cache
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csproj.CoreCompileInputs.cache
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.csproj.CopyComplete
@@ -42,3 +39,8 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClien
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.pdb
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.SalaryDetails.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.EmployeesList.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Companies.List.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Companies.Editor.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Employees.Editor.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Employees.List.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.WinClient\obj\Debug\SalaryApp.WinClient.Views.Salary.List.resources

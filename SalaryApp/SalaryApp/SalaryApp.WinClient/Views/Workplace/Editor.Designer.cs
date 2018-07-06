@@ -1,6 +1,6 @@
 ﻿namespace SalaryApp.WinClient.Views.Workplace
 {
-    partial class WorkplaceEditor
+    partial class Editor
     {
         /// <summary>
         /// Required designer variable.

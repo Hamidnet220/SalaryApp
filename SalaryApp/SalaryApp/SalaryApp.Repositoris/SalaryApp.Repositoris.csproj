@@ -310,6 +310,15 @@
     <Compile Include="Migrations\201807051701095_RenameNationalityToCountyEmployeeTable.Designer.cs">
       <DependentUpon>201807051701095_RenameNationalityToCountyEmployeeTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807060417087_AddDaysInAttandanceTable.cs" />
+    <Compile Include="Migrations\201807060417087_AddDaysInAttandanceTable.Designer.cs">
+      <DependentUpon>201807060417087_AddDaysInAttandanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807060431358_foo4.cs" />
+    <Compile Include="Migrations\201807060431358_foo4.Designer.cs">
+      <DependentUpon>201807060431358_foo4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\AttendanceRepository.cs" />
     <Compile Include="Repositories\BankRepository.cs" />
     <Compile Include="Entities\Bank.cs" />
     <Compile Include="Entities\City.cs" />
@@ -322,12 +331,14 @@
     <Compile Include="Repositories\CityRepository.cs" />
     <Compile Include="Repositories\CompanyRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
+    <Compile Include="Repositories\CountyRepository.cs" />
     <Compile Include="Repositories\EducationRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\GenderRepository.cs" />
     <Compile Include="Repositories\SalaryDitailsRepository.cs" />
     <Compile Include="Repositories\SalaryRepository.cs" />
     <Compile Include="Repositories\WorkplaceRepository.cs" />
+    <Compile Include="RpositoryInterfaces\IAttendanceRepository.cs" />
     <Compile Include="RpositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEducationRepository.cs" />
     <Compile Include="RpositoryInterfaces\IEmployeeRepository.cs" />
@@ -536,6 +547,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807051701095_RenameNationalityToCountyEmployeeTable.resx">
       <DependentUpon>201807051701095_RenameNationalityToCountyEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807060417087_AddDaysInAttandanceTable.resx">
+      <DependentUpon>201807060417087_AddDaysInAttandanceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807060431358_foo4.resx">
+      <DependentUpon>201807060431358_foo4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

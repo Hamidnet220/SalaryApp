@@ -6,7 +6,7 @@ namespace SalaryApp.Repositoris.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public Workplace Workplace { get; set; }
+        public virtual Workplace Workplace { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }
         public decimal SumSalary { get; set; }

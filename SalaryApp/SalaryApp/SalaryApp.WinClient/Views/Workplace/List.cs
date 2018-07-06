@@ -1,24 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SalaryApp.WinClient.Views.Controls;
-using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Workplace
 {
-    public partial class WorkplaceList : ViewBase<WorkplaceList>
+    public partial class List : ViewBase<List>
     {
-        protected GridControl<Repositoris.Entities.Workplace> grid;
+        private GridControl<Repositoris.Entities.Workplace> grid;
 
-        public WorkplaceList()
+        public List()
         {
             ViewTitle = @"لیست کارگاه ها";
+            this.WindowState = FormWindowState.Maximized;
         }
 
         protected override void OnLoad(EventArgs e)

@@ -8,15 +8,16 @@ using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class EmployeeEditor : ViewBase<Employee>
+    public partial class Editor : ViewBase<Employee>
     {
         private readonly Employee _employee;   
 
-        public EmployeeEditor(Employee employee)
+        public Editor(Employee employee)
         {
             _employee = employee;
 
             InitializeComponent();
+          
 
             this.WindowState=FormWindowState.Maximized;
             BankNameComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
@@ -31,7 +32,8 @@ namespace SalaryApp.WinClient.Views.Employees
             InitialFormDataBinding();
         }
 
-        public override string ViewTitle
+
+        protected override string ViewTitle
         {
             get { return "ویرایش اطلاعات کارکنان"; }
         }
@@ -46,6 +48,7 @@ namespace SalaryApp.WinClient.Views.Employees
             bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
             bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
             bindingTools.BindTextBox(Account1TextBox,emp=>emp.BankAccNumber1);
+            bindingTools.BindMaskTextBox(DateOfBorn,emp=>emp.DOB);
 
 
             bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
@@ -66,6 +69,13 @@ namespace SalaryApp.WinClient.Views.Employees
                 unitOfWork.Cities.GetAll().ToList(),
                 "نامشخص",
                 c => c.CityName,
+                c => c.Id,
+                _employee.POI);
+
+            bindingTools.BindComboBox<int?,Country, Employee>(CountryComboBox,
+                unitOfWork.Countries.GetAll().ToList(),
+                "نامشخص",
+                c => c.Title,
                 c => c.Id,
                 _employee.POI);
         }

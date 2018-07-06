@@ -11,21 +11,19 @@ namespace SalaryApp.WinClient
 {
     public class ViewBase<TEntity>:Form where TEntity:class
     {
-        public virtual string ViewTitle { get; set; }
-        protected UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
+        protected virtual string ViewTitle { get; set; }
+        protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
-        public ViewBase()
+        protected ViewBase()
         {
             this.RightToLeft = RightToLeft.Yes;
             this.Font = new Font("tahoma", 9);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.WindowState = FormWindowState.Maximized;
-
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            this.Text = ViewTitle;
+            Text = ViewTitle;
             base.OnLoad(e);
         }
     }

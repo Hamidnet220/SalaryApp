@@ -1,6 +1,6 @@
 ﻿namespace SalaryApp.WinClient.Views.Salary
 {
-    partial class SalaryList
+    partial class List
     {
         /// <summary>
         /// Required designer variable.

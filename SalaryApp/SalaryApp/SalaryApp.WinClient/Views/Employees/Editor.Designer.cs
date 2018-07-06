@@ -1,6 +1,6 @@
 ﻿namespace SalaryApp.WinClient.Views.Employees
 {
-    partial class EmployeeEditor
+    partial class Editor
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,10 @@
             this.POIComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.POBComboBox = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CountryComboBox = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DateOfBorn = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -146,7 +150,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(640, 234);
+            this.label6.Location = new System.Drawing.Point(640, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 14);
             this.label6.TabIndex = 1;
@@ -155,16 +159,16 @@
             // Account1TextBox
             // 
             this.Account1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Account1TextBox.Location = new System.Drawing.Point(514, 259);
+            this.Account1TextBox.Location = new System.Drawing.Point(477, 315);
             this.Account1TextBox.Name = "Account1TextBox";
-            this.Account1TextBox.Size = new System.Drawing.Size(120, 22);
+            this.Account1TextBox.Size = new System.Drawing.Size(157, 22);
             this.Account1TextBox.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(640, 262);
+            this.label7.Location = new System.Drawing.Point(640, 323);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 14);
             this.label7.TabIndex = 1;
@@ -173,7 +177,7 @@
             // textBox8
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(514, 287);
+            this.textBox8.Location = new System.Drawing.Point(514, 343);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(120, 22);
             this.textBox8.TabIndex = 0;
@@ -182,7 +186,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(640, 290);
+            this.label8.Location = new System.Drawing.Point(640, 351);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 14);
             this.label8.TabIndex = 1;
@@ -191,7 +195,7 @@
             // textBox9
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(514, 315);
+            this.textBox9.Location = new System.Drawing.Point(514, 371);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(120, 22);
             this.textBox9.TabIndex = 0;
@@ -200,7 +204,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(640, 318);
+            this.label9.Location = new System.Drawing.Point(640, 379);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 14);
             this.label9.TabIndex = 1;
@@ -209,7 +213,7 @@
             // BankNameComboBox
             // 
             this.BankNameComboBox.FormattingEnabled = true;
-            this.BankNameComboBox.Location = new System.Drawing.Point(514, 231);
+            this.BankNameComboBox.Location = new System.Drawing.Point(514, 287);
             this.BankNameComboBox.Name = "BankNameComboBox";
             this.BankNameComboBox.Size = new System.Drawing.Size(120, 22);
             this.BankNameComboBox.TabIndex = 2;
@@ -218,7 +222,7 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(640, 206);
+            this.label10.Location = new System.Drawing.Point(640, 267);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 14);
             this.label10.TabIndex = 1;
@@ -227,7 +231,7 @@
             // POIComboBox
             // 
             this.POIComboBox.FormattingEnabled = true;
-            this.POIComboBox.Location = new System.Drawing.Point(514, 203);
+            this.POIComboBox.Location = new System.Drawing.Point(514, 259);
             this.POIComboBox.Name = "POIComboBox";
             this.POIComboBox.Size = new System.Drawing.Size(120, 22);
             this.POIComboBox.TabIndex = 2;
@@ -236,7 +240,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(640, 178);
+            this.label11.Location = new System.Drawing.Point(640, 239);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 14);
             this.label11.TabIndex = 1;
@@ -245,16 +249,56 @@
             // POBComboBox
             // 
             this.POBComboBox.FormattingEnabled = true;
-            this.POBComboBox.Location = new System.Drawing.Point(514, 175);
+            this.POBComboBox.Location = new System.Drawing.Point(514, 231);
             this.POBComboBox.Name = "POBComboBox";
             this.POBComboBox.Size = new System.Drawing.Size(120, 22);
             this.POBComboBox.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(640, 206);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 14);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "کشور";
+            // 
+            // CountryComboBox
+            // 
+            this.CountryComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CountryComboBox.FormattingEnabled = true;
+            this.CountryComboBox.Location = new System.Drawing.Point(514, 203);
+            this.CountryComboBox.Name = "CountryComboBox";
+            this.CountryComboBox.Size = new System.Drawing.Size(120, 22);
+            this.CountryComboBox.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(640, 178);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 14);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "تاریخ تولد";
+            // 
+            // DateOfBorn
+            // 
+            this.DateOfBorn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateOfBorn.Location = new System.Drawing.Point(515, 175);
+            this.DateOfBorn.Mask = "____/__/__";
+            this.DateOfBorn.Name = "DateOfBorn";
+            this.DateOfBorn.Size = new System.Drawing.Size(119, 22);
+            this.DateOfBorn.TabIndex = 3;
             // 
             // EmployeeEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 430);
+            this.Controls.Add(this.DateOfBorn);
+            this.Controls.Add(this.CountryComboBox);
             this.Controls.Add(this.POBComboBox);
             this.Controls.Add(this.POIComboBox);
             this.Controls.Add(this.BankNameComboBox);
@@ -264,6 +308,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -308,5 +354,9 @@
         private System.Windows.Forms.ComboBox POIComboBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox POBComboBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox CountryComboBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox DateOfBorn;
     }
 }

@@ -8,6 +8,7 @@ namespace SalaryApp.Repositoris
     {
         IBankRepository Banks { get; }
         ICityRepository Cities { get; }
+        ICountryRepository Countries { get; }
         IGenderRepository Genders { get; }
         IEmployeeRepository Employees { get; }
         IWorkplaceRepository Workplaces { get; }

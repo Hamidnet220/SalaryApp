@@ -10,12 +10,12 @@ using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class EmployeeList : ViewBase <Employee>
+    public partial class List : ViewBase <Employee>
     {
 
         protected GridControl<Employee> grid;
 
-        public EmployeeList()
+        public List()
         {
             InitializeComponent();
             this.ViewTitle = "لیست پرسنل";
@@ -63,7 +63,7 @@ namespace SalaryApp.WinClient.Views.Employees
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            var employeeEditor=new Views.Employees.EmployeeEditor(grid.CurrentItem);
+            var employeeEditor=new Views.Employees.Editor(grid.CurrentItem);
             employeeEditor.ShowDialog();
         }
 

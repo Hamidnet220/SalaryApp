@@ -6,7 +6,7 @@ namespace SalaryApp.Repositoris.Entities
     public class Workplace
     {
         public int Id { get; set; }
-        public Company Company { get; set; }
+        public virtual Company Company { get; set; }
         public int CompanyId { get; set; }
         public string InsuranceCode { get; set; }
         public bool IsAcitve { get; set; }

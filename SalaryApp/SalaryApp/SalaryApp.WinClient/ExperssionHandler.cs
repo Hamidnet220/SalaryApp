@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace SalaryApp.WinClient.Views.Employees
+namespace SalaryApp.WinClient
 {
     public  class ExperssionHandler:ExpressionVisitor
     {

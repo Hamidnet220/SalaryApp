@@ -3,12 +3,12 @@ using System.Linq;
 using SalaryApp.WinClient.Views.Controls;
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public partial class SalaryList : ViewBase<SalaryList>
+    public partial class List : ViewBase<List>
     {
         private GridControl<Repositoris.Entities.Salary> _grid;
         private Repositoris.Entities.Salary _salary;
 
-        public SalaryList()
+        public List()
         {
             InitializeComponent();
             this.ViewTitle = @"لیست حقوق ها";

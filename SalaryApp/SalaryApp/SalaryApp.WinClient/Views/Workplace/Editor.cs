@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalaryApp.WinClient.Views.Workplace
 {
-    public partial class WorkplaceEditor : Form
+    public partial class Editor : Form
     {
-        public WorkplaceEditor()
+        public Editor()
         {
             InitializeComponent();
         }

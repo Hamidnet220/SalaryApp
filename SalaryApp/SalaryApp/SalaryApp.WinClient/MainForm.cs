@@ -18,19 +18,19 @@ namespace SalaryApp.WinClient
 
             baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, (obj, e) =>
             {
-                var view=new Views.Companies.CompaniesList();
+                var view=new Views.Companies.List();
                 view.ShowDialog();
             });
 
             baseInfoItem.DropDownItems.Add("اطلاعات کارگاه ها", null, (obj, e) =>
             {
-                var view = new Views.Workplace.WorkplaceList();
+                var view = new Views.Workplace.List();
                 view.ShowDialog();
             });
 
             baseInfoItem.DropDownItems.Add("اطلاعات کارکنان", null, (obj, e) =>
                 {
-                    var view = new Views.Employees.EmployeeList();
+                    var view = new Views.Employees.List();
                     view.ShowDialog();
                 });
 
@@ -43,7 +43,7 @@ namespace SalaryApp.WinClient
 
             salaryMenu.DropDownItems.Add("لیست های حقوق", null, (obj, e) =>
             {
-                var view=new Views.Salary.SalaryList();
+                var view=new Views.Salary.List();
                 view.ShowDialog();
             });
 

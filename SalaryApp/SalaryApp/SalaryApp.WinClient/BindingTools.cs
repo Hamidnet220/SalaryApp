@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-using SalaryApp.Repositoris.Entities;
+using SalaryApp.WinClient.Views.Employees;
 
-namespace SalaryApp.WinClient.Views.Employees
+namespace SalaryApp.WinClient
 {
     public class BindingTools<TEntity> where TEntity:class 
     {
@@ -21,6 +21,14 @@ namespace SalaryApp.WinClient.Views.Employees
             var propertyName = visitor.GetPropertyName(selector);
             textBox.DataBindings.Add("Text", _entity,propertyName);
 
+        }
+
+        public void BindMaskTextBox<TProperty>(MaskedTextBox maskedTextBox, Expression<Func<TEntity, TProperty>> selector)
+        {
+            var visitor = new ExperssionHandler();
+            var propertyName = visitor.GetPropertyName(selector);
+            maskedTextBox.DataBindings.Add("Text", _entity, propertyName);
+            
         }
 
         public  void BindComboBox<TProperty,TComboItem,TEntity>(ComboBox comboBox,
