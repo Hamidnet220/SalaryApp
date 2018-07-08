@@ -11,7 +11,7 @@ namespace SalaryApp.Repositoris.Repositories
 {
     public class CountyRepository:Repository<Country>,ICountryRepository
     {
-        public CountyRepository(DbContext context) : base(context)
+        public CountyRepository(System.Data.Entity.DbContext context) : base(context)
         {
         }
     }

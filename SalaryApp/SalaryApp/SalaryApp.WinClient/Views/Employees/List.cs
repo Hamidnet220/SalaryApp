@@ -4,23 +4,29 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using SalarApp.Framework;
+using SalaryApp.Framework;
 using SalaryApp.Repositoris;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
-using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class List : ViewBase <Employee>
+    public partial class List : ViewBase 
     {
 
         protected GridControl<Employee> grid;
+        protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
         public List()
         {
             InitializeComponent();
             this.ViewTitle = "لیست پرسنل";
-            this.WindowState = FormWindowState.Maximized;
-            
+            AddAction("پرسنل جدید", btn =>
+            {
+                MessageBox.Show("مشتری جدید");
+            });
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -64,7 +70,6 @@ namespace SalaryApp.WinClient.Views.Employees
         private void EditButton_Click(object sender, EventArgs e)
         {
             var employeeEditor=new Views.Employees.Editor(grid.CurrentItem);
-            employeeEditor.ShowDialog();
         }
 
 

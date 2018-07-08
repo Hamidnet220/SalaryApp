@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SalaryApp.Framework;
 
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public class Editor:ViewBase<Repositoris.Entities.Salary>
+    public class Editor:ViewBase
     {
         private Repositoris.Entities.Salary salary;
         public Editor(Repositoris.Entities.Salary salary)

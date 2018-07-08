@@ -1,3 +1,5 @@
+using SalaryApp.Repositoris.DataLayer;
+
 namespace SalaryApp.Repositoris.Migrations
 {
     using System;
@@ -5,7 +7,7 @@ namespace SalaryApp.Repositoris.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SalaryApp.Repositoris.SalaryAppContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SalaryAppContext>
     {
         public Configuration()
         {
@@ -13,7 +15,7 @@ namespace SalaryApp.Repositoris.Migrations
             
         }
 
-        protected override void Seed(SalaryApp.Repositoris.SalaryAppContext context)
+        protected override void Seed(SalaryAppContext context)
         {
            //  This method will be called after migrating to the latest version.
 

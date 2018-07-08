@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
-using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.SalaryDetails
 {
-    public partial class List : ViewBase<List>
+    public partial class List : ViewBase
     {
+        private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         private GridControl<Employee> _grid;
         private readonly Repositoris.Entities.Salary _currenMonthSalary;
         private IEnumerable<SalaryDetail> salaryDetails;
@@ -48,10 +51,7 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
         private void AddEmployee_Click(object sender, EventArgs e)
         {
             var selectEmployeeView=new EmployeesList(_currenMonthSalary);
-            if (selectEmployeeView.ShowDialog() == DialogResult.OK)
-            {
-                this.OnLoad(e);
-            }
+            
 
 
         }

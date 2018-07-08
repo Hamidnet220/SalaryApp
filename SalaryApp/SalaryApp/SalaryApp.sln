@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryApp.Repositoris", "Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryApp.WinClient", "SalaryApp.WinClient\SalaryApp.WinClient.csproj", "{71DD4134-FC60-4530-A12C-7108AD466DD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryApp.Framework", "SalaryApp.Framework\SalaryApp.Framework.csproj", "{7EE041BA-9183-46FE-8F8C-366C2ADD334A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,23 +29,15 @@ Global
 		{71DD4134-FC60-4530-A12C-7108AD466DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DD4134-FC60-4530-A12C-7108AD466DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DD4134-FC60-4530-A12C-7108AD466DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE041BA-9183-46FE-8F8C-366C2ADD334A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE041BA-9183-46FE-8F8C-366C2ADD334A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE041BA-9183-46FE-8F8C-366C2ADD334A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE041BA-9183-46FE-8F8C-366C2ADD334A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://hkiani.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SalaryApp.DataLayer\\SalaryApp.DataLayer.csproj
-		SccProjectName1 = SalaryApp.DataLayer
-		SccLocalPath1 = SalaryApp.DataLayer
-		SccProjectUniqueName2 = SalaryApp.Repositoris\\SalaryApp.Repositoris.csproj
-		SccProjectName2 = SalaryApp.Repositoris
-		SccLocalPath2 = SalaryApp.Repositoris
-		SccProjectUniqueName3 = SalaryApp.WinClient\\SalaryApp.WinClient.csproj
-		SccProjectName3 = SalaryApp.WinClient
-		SccLocalPath3 = SalaryApp.WinClient
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64326F64-9743-488C-AE89-5FEF702AFEF5}
 	EndGlobalSection
 EndGlobal

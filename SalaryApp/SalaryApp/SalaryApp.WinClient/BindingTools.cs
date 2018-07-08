@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
+using SalarApp.Framework;
 using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient

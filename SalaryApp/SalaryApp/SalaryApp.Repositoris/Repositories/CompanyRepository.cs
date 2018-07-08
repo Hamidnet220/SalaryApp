@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SalaryApp.DataLayer;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.Repositoris.RpositoryInterfaces;
 

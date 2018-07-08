@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using SalaryApp.WinClient.Views.Controls;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
 
 namespace SalaryApp.WinClient.Views.Workplace
 {
-    public partial class List : ViewBase<List>
+    public partial class List : ViewBase
     {
         private GridControl<Repositoris.Entities.Workplace> grid;
+        private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
         public List()
         {
             ViewTitle = @"لیست کارگاه ها";
-            this.WindowState = FormWindowState.Maximized;
         }
 
         protected override void OnLoad(EventArgs e)

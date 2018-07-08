@@ -89,11 +89,6 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Reposito
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddInsuranceCodeToWorkplace.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RenameInsuranceIdToInsuranceNumberEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddInsuranceIdFieldAndForeginKeyToEmployeeeTable.resources
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.GenerateResource.cache
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.CoreCompileInputs.cache
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.CopyComplete
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.dll
-D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.pdb
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddMilitartyServiceStatusToEmlpoyeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.MakeBanksPropertyToVirtualInEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.ChangeBankName1IdToBank_IdEmployeeTable.resources
@@ -125,3 +120,8 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Reposito
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.RenameNationalityToCountyEmployeeTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.AddDaysInAttandanceTable.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.Migrations.foo4.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.GenerateResource.cache
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.CoreCompileInputs.cache
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.csproj.CopyComplete
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Repositoris\obj\Debug\SalaryApp.Repositoris.pdb

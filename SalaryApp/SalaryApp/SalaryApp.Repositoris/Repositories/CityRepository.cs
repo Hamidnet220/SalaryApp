@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.Remoting.Contexts;
+using SalaryApp.DataLayer;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.Repositoris.RpositoryInterfaces;
 

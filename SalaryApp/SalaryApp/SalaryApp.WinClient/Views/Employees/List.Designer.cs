@@ -88,7 +88,6 @@
             this.ClientSize = new System.Drawing.Size(466, 337);
             this.Controls.Add(this.ButttonsPanel);
             this.Name = "EmployeeList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeList";
             this.ButttonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);

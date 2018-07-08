@@ -3,61 +3,58 @@ using SalaryApp.WinClient.Views.Companies;
 
 namespace SalaryApp.WinClient
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Framework.MainForm
     {
         public MainForm()
         {
             InitializeComponent();
-            this.RightToLeft=RightToLeft.Yes;
-            this.WindowState=FormWindowState.Maximized;
+           
             this.Text = @"برنامه حقوق و دستمزد شرکت یاور پویای جنوب";
 
 
             //base info menu
-            var baseInfoItem =(ToolStripMenuItem) MainMenuStrip.Items.Add("اطلاعات پایه",null,null);
+            var baseInfoItem =AddMenu("اطلاعات پایه",null,null);
 
-            baseInfoItem.DropDownItems.Add("اطلاعات شرکت ها", null, (obj, e) =>
+            baseInfoItem.AddMenu("اطلاعات شرکت ها", null, (obj, e) =>
             {
                 var view=new Views.Companies.List();
-                view.ShowDialog();
             });
 
-            baseInfoItem.DropDownItems.Add("اطلاعات کارگاه ها", null, (obj, e) =>
+            baseInfoItem.AddMenu("اطلاعات کارگاه ها", null, (obj, e) =>
             {
                 var view = new Views.Workplace.List();
-                view.ShowDialog();
             });
 
-            baseInfoItem.DropDownItems.Add("اطلاعات کارکنان", null, (obj, e) =>
-                {
-                    var view = new Views.Employees.List();
-                    view.ShowDialog();
-                });
+            baseInfoItem.AddMenu("اطلاعات کارکنان", null, (obj, e) =>
+            {
+                ViewEngin.ViewInTab<Views.Employees.List>();
+            });
 
+            baseInfoItem.AddSeparator();
 
-            baseInfoItem.DropDownItems.Add("خروج", null, (obj, e) => { Application.Exit();});
+            baseInfoItem.AddMenu("خروج", null, (obj, e) => { Application.Exit();});
 
 
             //salary menu
-            var salaryMenu =(ToolStripMenuItem) MainMenuStrip.Items.Add("حقوق و دستمزد", null);
+            var salaryMenu =AddMenu("حقوق و دستمزد", null);
 
-            salaryMenu.DropDownItems.Add("لیست های حقوق", null, (obj, e) =>
+            salaryMenu.AddMenu("لیست های حقوق", null, (obj, e) =>
             {
                 var view=new Views.Salary.List();
-                view.ShowDialog();
             });
 
             
             //report Menu
-            var reportMenu = (ToolStripMenuItem) MainMenuStrip.Items.Add("گزارشات", null);
-
-            reportMenu.DropDownItems.Add("بیمه", null, null);
-            reportMenu.DropDownItems.Add("مالیات", null, null);
-            reportMenu.DropDownItems.Add("مساعده", null, null);
-            reportMenu.DropDownItems.Add("حضور و غیاب", null, null);
-            reportMenu.DropDownItems.Add("لیست حقوق", null, null);
-            reportMenu.DropDownItems.Add("لیست بانک", null, null);
-            reportMenu.DropDownItems.Add("پاداش بهره وری", null, null);
+            var reportMenu = AddMenu("گزارشات", null);
+            reportMenu.AddMenu("بیمه", null, null);
+            reportMenu.AddMenu("مالیات", null, null);
+            reportMenu.AddSeparator();
+            reportMenu.AddMenu("مساعده", null, null);
+            reportMenu.AddMenu("حضور و غیاب", null, null);
+            reportMenu.AddMenu("لیست حقوق", null, null);
+            reportMenu.AddSeparator();
+            reportMenu.AddMenu("لیست بانک", null, null);
+            reportMenu.AddMenu("پاداش بهره وری", null, null);
 
 
 

@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Linq;
-using SalaryApp.WinClient.Views.Controls;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
+
 namespace SalaryApp.WinClient.Views.Salary
 {
-    public partial class List : ViewBase<List>
+    public partial class List : ViewBase
     {
+        private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         private GridControl<Repositoris.Entities.Salary> _grid;
         private Repositoris.Entities.Salary _salary;
 

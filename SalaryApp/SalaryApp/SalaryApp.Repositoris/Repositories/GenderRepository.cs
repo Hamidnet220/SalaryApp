@@ -11,7 +11,7 @@ namespace SalaryApp.Repositoris.Repositories
 {
     public class GenderRepository:Repository<Gender>,IGenderRepository
     {
-        public GenderRepository(DbContext context) : base(context)
+        public GenderRepository(System.Data.Entity.DbContext context) : base(context)
         {
         }
 

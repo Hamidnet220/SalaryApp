@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
-using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.SalaryDetails
 {
-    public partial class EmployeesList : ViewBase<Employee>
+    public partial class EmployeesList : ViewBase
     {
+        private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         private GridControl<Employee> grid;
         private Repositoris.Entities.Salary salary;
 
@@ -14,7 +17,6 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
         {
             InitializeComponent();
             ViewTitle = @"لیست کارکنان";
-            WindowState = FormWindowState.Maximized;
             this.salary = salary;
         }
         protected override void OnLoad(EventArgs e)
@@ -47,8 +49,7 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
                 });
             }
             unitOfWork.Complete();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            
         }
     }
 }

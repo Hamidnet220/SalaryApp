@@ -8,9 +8,9 @@ namespace SalaryApp.Repositoris
 {
     public class Repository<TEntity>:IRepository<TEntity> where TEntity:class
     {
-        protected readonly DbContext Context;
+        protected readonly System.Data.Entity.DbContext Context;
 
-        public Repository(DbContext context)
+        public Repository(System.Data.Entity.DbContext context)
         {
             Context = context;
         }

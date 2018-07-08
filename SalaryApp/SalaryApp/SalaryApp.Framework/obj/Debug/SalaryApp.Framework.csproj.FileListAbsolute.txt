@@ -1,0 +1,16 @@
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.csprojAssemblyReference.cache
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.csproj.GenerateResource.cache
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.csproj.CoreCompileInputs.cache
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\SalaryApp.Framework.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\SalaryApp.Framework.pdb
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\SalaryApp.Repositoris.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\EntityFramework.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\SalaryApp.Repositoris.pdb
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\SalaryApp.Repositoris.dll.config
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\EntityFramework.xml
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.csproj.CopyComplete
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.pdb
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.Properties.Resources.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.ViewBase.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.MainForm.resources

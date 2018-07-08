@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
 using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient.Views.Companies
 {
-    public partial class Editor : ViewBase<Company>
+    public partial class Editor : ViewBase
     {
+        protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         private Company company;
         private Company companyCopy=new Company();
         private BindingTools<Company> bindingTools;
@@ -51,18 +55,14 @@ namespace SalaryApp.WinClient.Views.Companies
                 company.CreateDate=DateTime.Now;
                 unitOfWork.Companies.Add(company);
                 unitOfWork.Complete();
-                Close();
                 return;
             }
 
-            DialogResult=DialogResult.OK;
-            Close();
 
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            DialogResult=DialogResult.Cancel;
            
         }
     }

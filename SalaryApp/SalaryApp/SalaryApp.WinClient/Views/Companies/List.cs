@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using SalarApp.Framework;
+using SalaryApp.Framework;
+using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
-using SalaryApp.WinClient.Views.Controls;
 
 namespace SalaryApp.WinClient.Views.Companies
 {
-    public partial class List : ViewBase<Company>
+    public partial class List : ViewBase
     {
         private GridControl<Company> grid;
+        protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
         public List()
         {
             InitializeComponent();
             ViewTitle = @"لیست شرکت ها و موسسات";
-            this.StartPosition=FormStartPosition.CenterScreen;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -33,17 +35,14 @@ namespace SalaryApp.WinClient.Views.Companies
         private void NewButton_Click(object sender, EventArgs e)
         {
             var companyEditor = new Editor(new Company());
-            companyEditor.ShowDialog();
             grid.SetDataSource(unitOfWork.Companies.GetAll());
         }
 
         private void EditButton_Click(object sender, EventArgs e)
         {
             var companyEditor=new Editor(grid.CurrentItem);
-            companyEditor.ShowDialog();
 
-            if (companyEditor.DialogResult == DialogResult.OK)
-                unitOfWork.Complete();
+            
 
             grid.ResetBindings();
         }

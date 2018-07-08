@@ -11,7 +11,7 @@ namespace SalaryApp.Repositoris.Repositories
 {
     public class AttendanceRepository:Repository<Attendance>,IAttendanceRepository
     {
-        public AttendanceRepository(DbContext context) : base(context)
+        public AttendanceRepository(System.Data.Entity.DbContext context) : base(context)
         {
         }
     }
