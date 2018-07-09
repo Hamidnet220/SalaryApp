@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SalaryApp.Framework.IOC;
 
 namespace SalaryApp.Framework
 {
@@ -12,14 +13,21 @@ namespace SalaryApp.Framework
     {
         private TabControl tabControl;
         private Dictionary<string, TabPage> openTabs = new Dictionary<string, TabPage>();
+        private Dictionary<string,Form> openForms=new Dictionary<string, Form>();
+
 
         public ViewEngin(TabControl tabControl)
         {
             this.tabControl = tabControl;
         }
-        public ViewBase ViewInTab<T>() where T : ViewBase
+        public ViewBase ViewInTab<T>(Action<T> initializer=null) where T : ViewBase
         {
-            var viewInstance = (ViewBase)Activator.CreateInstance<T>();
+            var typeRegistery = new TypeRegistery();
+            var container = new StructureMap.Container(typeRegistery);
+            var viewInstance = container.GetInstance<T>();
+            if (initializer !=null)
+                initializer(viewInstance);
+            viewInstance.ViewEngin = this;
             if (openTabs.ContainsKey(viewInstance.ViewIdentifier))
             {
                 var currentTab = openTabs[viewInstance.ViewIdentifier];
@@ -32,22 +40,40 @@ namespace SalaryApp.Framework
             viewInstance.Dock = DockStyle.Fill;
             tabControl.TabPages.Add(tabPage);
             tabControl.SelectedTab = tabPage;
-            openTabs.Add(viewInstance.ViewIdentifier,tabPage);
+            openTabs.Add(viewInstance.ViewIdentifier, tabPage);
             return (T)viewInstance;
         }
 
-        public T ViewInForm<T>(bool displayAsDialog) where T : ViewBase
+        public T ViewInForm<T>(Action<T> initialazer=null, bool displayAsDialog=false) where T : ViewBase
         {
-            var viewInstance = (ViewBase)Activator.CreateInstance<T>();
+
+            var typeRegistery = new TypeRegistery();
+            var container = new StructureMap.Container(typeRegistery);
+            var viewInstance = container.GetInstance<T>();
+            viewInstance.ViewEngin = this;
+            if (initialazer != null)
+                initialazer(viewInstance);
+
+            if (openForms.ContainsKey(viewInstance.ViewIdentifier))
+            {
+                var currentForm = openForms[viewInstance.ViewIdentifier];
+                currentForm.Activate();
+                return (T)currentForm.Controls.OfType<ViewBase>().First();
+            }
             var form = new Form();
-            form.Height = 800;
-            form.Width = 600;
+            form.Height = 600;
+            form.Width = 800;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.RightToLeft = RightToLeft.Yes;
             form.Font = new Font("Tahoma", 8);
             form.Text = viewInstance.ViewTitle;
             viewInstance.Dock = DockStyle.Fill;
             form.Controls.Add(viewInstance);
+            form.FormClosed += (obj, e) =>
+            {
+                openForms.Remove(viewInstance.ViewIdentifier);
+            };
+            openForms.Add(viewInstance.ViewIdentifier,form);
             if (displayAsDialog)
                 form.ShowDialog();
             else
@@ -55,6 +81,7 @@ namespace SalaryApp.Framework
             return (T)viewInstance;
         }
 
+        
         public void CloseViewTab(TabPage selectedTab)
         {
             var currentView = selectedTab.Controls.OfType<ViewBase>().FirstOrDefault();
@@ -67,6 +94,30 @@ namespace SalaryApp.Framework
                 }
 
                 tabControl.TabPages.Remove(selectedTab);
+            }
+        }
+
+        public void CloseView(ViewBase viewBase,DialogResult? dialogResult=null)
+        {
+            if (openForms.ContainsKey(viewBase.ViewIdentifier))
+            {
+                if (dialogResult.HasValue)
+                {
+                    openForms[viewBase.ViewIdentifier].DialogResult = dialogResult.Value;
+                    if (!openForms[viewBase.ViewIdentifier].Modal)
+                    {
+                        openForms[viewBase.ViewIdentifier].Close();
+                    }
+                }
+                else
+                    openForms[viewBase.ViewIdentifier].Close();
+
+                openForms.Remove(viewBase.ViewIdentifier);
+            }
+            else if(openTabs.ContainsKey((viewBase.ViewIdentifier)))
+            {
+                tabControl.TabPages.Remove(openTabs[viewBase.ViewIdentifier]);
+                openTabs.Remove(viewBase.ViewIdentifier);
             }
         }
     }

@@ -8,21 +8,21 @@ namespace SalaryApp.WinClient
         public MainForm()
         {
             InitializeComponent();
-           
+
             this.Text = @"برنامه حقوق و دستمزد شرکت یاور پویای جنوب";
 
 
             //base info menu
-            var baseInfoItem =AddMenu("اطلاعات پایه",null,null);
+            var baseInfoItem = AddMenu("اطلاعات پایه", null, null);
 
             baseInfoItem.AddMenu("اطلاعات شرکت ها", null, (obj, e) =>
             {
-                var view=new Views.Companies.List();
+                ViewEngin.ViewInForm<Views.Companies.List>(null,true);
             });
 
             baseInfoItem.AddMenu("اطلاعات کارگاه ها", null, (obj, e) =>
             {
-                var view = new Views.Workplace.List();
+                ViewEngin.ViewInForm<Views.Workplace.List>();
             });
 
             baseInfoItem.AddMenu("اطلاعات کارکنان", null, (obj, e) =>
@@ -32,18 +32,18 @@ namespace SalaryApp.WinClient
 
             baseInfoItem.AddSeparator();
 
-            baseInfoItem.AddMenu("خروج", null, (obj, e) => { Application.Exit();});
+            baseInfoItem.AddMenu("خروج", null, (obj, e) => { Application.Exit(); });
 
 
             //salary menu
-            var salaryMenu =AddMenu("حقوق و دستمزد", null);
+            var salaryMenu = AddMenu("حقوق و دستمزد", null);
 
             salaryMenu.AddMenu("لیست های حقوق", null, (obj, e) =>
             {
-                var view=new Views.Salary.List();
+                var view = new Views.Salary.List();
             });
 
-            
+
             //report Menu
             var reportMenu = AddMenu("گزارشات", null);
             reportMenu.AddMenu("بیمه", null, null);

@@ -3,62 +3,64 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using SalarApp.Framework;
+using StructureMap.Diagnostics.TreeView;
 
 namespace SalaryApp.Framework
 {
-    public sealed class GridControl<TEntity>:DataGridView where TEntity:class
+    public class GridControl<TModel>
     {
-        private readonly IEnumerable<TEntity> entities;
+        private DataGridView grid;
         private BindingSource bindigSource; 
 
-        public GridControl(IEnumerable<TEntity> entities)
+        public GridControl(Control container)
         {
-            DoubleBuffered = true;
+            grid=new DataGridView();
+            container.Controls.Add(grid);
 
-            Dock = DockStyle.Fill;
-            AllowUserToAddRows = false;
-            AllowUserToDeleteRows = false;
-            EditMode = DataGridViewEditMode.EditProgrammatically;
-            AutoGenerateColumns = false;
-            SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-             this.entities = entities;
-             
-             SetDataSource(entities);
-        }
-
-
-        public void SetDataSource (IEnumerable<TEntity> entities)
-        {
-            bindigSource = new BindingSource {DataSource = entities};
-            DataSource = bindigSource;
-            ((Control) this).ResetBindings();
+            grid.Dock = DockStyle.Fill;
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            grid.EditMode = DataGridViewEditMode.EditProgrammatically;
+            grid.AutoGenerateColumns = false;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
         }
 
 
-        public void  AddColumn<TProperty>(string columnName,
-            Expression<Func<TEntity, TProperty>> selector )
+        public GridControl<TModel> SetDataSource (IEnumerable<TModel> dataSource)
         {
-            var visitor = new ExperssionHandler();
-            var col = new DataGridViewTextBoxColumn
-            {
-                HeaderText = columnName,
-                DataPropertyName = visitor.GetPropertyName(selector)
-            };
-            this.Columns.Add(col);
+            bindigSource = new BindingSource {DataSource = dataSource};
+            grid.DataSource = bindigSource;
+            bindigSource.ResetBindings(true);
+
+            return this;
         }
 
-        public void AddCheckBox(string columnName)
+
+        public GridControl<TModel> AddTextBoxColumn<TProperty>(string columnName,
+            Expression<Func<TModel, TProperty>> selector )
+        {
+            var propertyName = new ExperssionHandler().GetPropertyName(selector);
+            grid.Columns.Add(new DataGridViewTextBoxColumn
+            {
+               HeaderText = columnName,
+               DataPropertyName = propertyName
+            });
+
+            return this;
+        }
+
+        public GridControl<TModel> AddCheckBox(string columnName)
         {
             var checkBox = new DataGridViewCheckBoxColumn
             {
                 HeaderText = columnName,
             };
-           
-           Columns.Add(checkBox);
-           
+
+            grid.Columns.Add(checkBox);
+            return this;
+
         }
 
         public void ResetBindings()
@@ -66,22 +68,16 @@ namespace SalaryApp.Framework
             bindigSource?.ResetBindings(true);
         }
 
-        public void AddColumn(string columnName,string propetyName)
+        public TModel CurrentItem
         {
-            Columns.Add(new DataGridViewTextBoxColumn
-            {
-
-                HeaderText = columnName,
-                DataPropertyName = propetyName
-            });
+            get { return (TModel)bindigSource?.Current; }
         }
 
         public void RemoveCurrent()
         {
             bindigSource.RemoveCurrent();
-            ((Control) this).ResetBindings();
+            ResetBindings();
         }
 
-        public TEntity CurrentItem => (TEntity) bindigSource?.Current;
     }
 }

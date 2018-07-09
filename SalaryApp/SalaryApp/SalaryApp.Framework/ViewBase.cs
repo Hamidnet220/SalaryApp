@@ -25,6 +25,12 @@ namespace SalaryApp.Framework
             
         }
 
+        public ViewEngin ViewEngin
+        {
+            get;
+            internal set;
+        }
+
         protected Button AddAction(string title, Action<Button> onClick)
         {
             var button=new Button();
@@ -33,10 +39,17 @@ namespace SalaryApp.Framework
             {
                 onClick(button);
             };
-            button.Location=new Point(10,8);
-            button.Size=new Size(75,23);
+            var totalButton = ButtonsBar.Controls.Count;
+            var left = ((totalButton + 1) * 5) + (totalButton*85);
+            button.Location=new Point(left, 7);
+            button.Size=new Size(85,23);
             ButtonsBar.Controls.Add(button);
-            return null;
+            return button;
+        }
+
+        protected void CloseView(DialogResult? dialogResult=null)
+        {
+            ViewEngin.CloseView(this,dialogResult);
         }
     }
 }

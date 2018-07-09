@@ -15,61 +15,65 @@ namespace SalaryApp.WinClient.Views.Employees
         public Editor(Employee employee)
         {
             InitializeComponent();
-            this.employee = employee;
-            BankNameComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
-            POBComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
-            POIComboBox.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
+
+            AddAction("صرفنظر", btn =>
+            {
+                CloseView(DialogResult.OK);
+            });
+
+            AddAction("تایید", btn =>
+            {
+                CloseView(DialogResult.Cancel);
+            });
+
 
         }
 
 
-        protected override void OnLoad(EventArgs e)
-        {
-            var bindingTools = new BindingTools<Employee>(employee);
+        //protected override void OnLoad(EventArgs e)
+        //{
+        //    var bindingTools = new BindingTools<Employee>(employee);
 
-            bindingTools.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
-            bindingTools.BindTextBox(LastNameTextBox, emp => emp.LastName);
-            bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
-            bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
-            bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
-            bindingTools.BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
-            bindingTools.BindMaskTextBox(DateOfBorn, emp => emp.DOB);
+        //    bindingTools.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
+        //    bindingTools.BindTextBox(LastNameTextBox, emp => emp.LastName);
+        //    bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
+        //    bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
+        //    bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
+        //    bindingTools.BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
+        //    bindingTools.BindMaskTextBox(DateOfBorn, emp => emp.DOB);
 
-            bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
-                unitOfWork.Banks.GetAll().ToList(),
-                "نام بانک ",
-                b => b.Title,
-                b => b.Id,
-                employee.BankName1Id);
+        //    bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
+        //        unitOfWork.Banks.GetAll().ToList(),
+        //        "نام بانک ",
+        //        b => b.Title,
+        //        b => b.Id,
+        //        employee.BankName1Id);
 
-            bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
-                unitOfWork.Cities.GetAll().ToList(),
-                "محل تولد",
-                c => c.CityName,
-                c => c.Id,
-                employee.POB);
+        //    bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
+        //        unitOfWork.Cities.GetAll().ToList(),
+        //        "محل تولد",
+        //        c => c.CityName,
+        //        c => c.Id,
+        //        employee.POB);
 
-            bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
-                unitOfWork.Cities.GetAll().ToList(),
-                "محل صدور",
-                c => c.CityName,
-                c => c.Id,
-                employee.POI);
+        //    bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
+        //        unitOfWork.Cities.GetAll().ToList(),
+        //        "محل صدور",
+        //        c => c.CityName,
+        //        c => c.Id,
+        //        employee.POI);
 
-            bindingTools.BindComboBox<int?, Country, Employee>(CountryComboBox,
-                unitOfWork.Countries.GetAll().ToList(),
-                "نام کشور",
-                c => c.Title,
-                c => c.Id,
-                employee.POI);
+        //    bindingTools.BindComboBox<int?, Country, Employee>(CountryComboBox,
+        //        unitOfWork.Countries.GetAll().ToList(),
+        //        "نام کشور",
+        //        c => c.Title,
+        //        c => c.Id,
+        //        employee.POI);
 
 
-            base.OnLoad(e);
-        }
+        //    base.OnLoad(e);
+        //}
 
-        
-
-        
-
+        public override string ViewTitle  => "ویرایش مشتری";
     }
 }

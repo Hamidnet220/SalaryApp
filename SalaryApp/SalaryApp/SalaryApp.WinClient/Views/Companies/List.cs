@@ -17,18 +17,49 @@ namespace SalaryApp.WinClient.Views.Companies
         {
             InitializeComponent();
             ViewTitle = @"لیست شرکت ها و موسسات";
+            AddAction("حذف", btn =>
+            {
+                if(MessageBox.Show(@"آیا حذف شرکت مورد نظر را تایید می کنید",@"حذف شرکت/موسسه",
+                    MessageBoxButtons.YesNo)!=DialogResult.Yes)
+                    return;
+
+                var company = grid.CurrentItem;
+                company.IsDeleted = true;
+                unitOfWork.Complete();
+                grid.RemoveCurrent();
+                
+            });
+
+            AddAction("ویرایش", btn =>
+            {
+                ViewEngin.ViewInForm<Views.Companies.Editor>(editor =>
+                {
+                    editor.Entity = grid.CurrentItem;
+                });
+            });
+
+            AddAction("جدید", btn =>
+            {
+                    ViewEngin.ViewInForm<Views.Companies.Editor>(null, true);
+            });
+
+            AddAction("انصراف", btn =>
+            {
+                CloseView(DialogResult.Cancel);
+                unitOfWork.Dispose();
+            });
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            grid = new GridControl<Company>(unitOfWork.Companies.GetAll().Where(c=>c.IsDeleted==false).ToList());
-            grid.AddColumn("عنوان شرکت ", c => c.Title);
-            grid.AddColumn("آدرس", c => c.Address);
-            grid.AddColumn("شماره تماس", c => c.Tel);
-            grid.AddColumn("شماره فکس", c => c.Fax);
+            var companies = unitOfWork.Companies.GetAll().Where(c => c.IsDeleted == false).ToList();
+            grid = new GridControl<Company>(this);
+            grid.AddTextBoxColumn("عنوان شرکت ", c => c.Title);
+            grid.AddTextBoxColumn("آدرس", c => c.Address);
+            grid.AddTextBoxColumn("شماره تماس", c => c.Tel);
+            grid.AddTextBoxColumn("شماره فکس", c => c.Fax);
 
-            this.Controls.Add(grid);
-            grid.BringToFront();
+            grid.SetDataSource(companies);
             base.OnLoad(e);
         }
 
@@ -41,22 +72,9 @@ namespace SalaryApp.WinClient.Views.Companies
         private void EditButton_Click(object sender, EventArgs e)
         {
             var companyEditor=new Editor(grid.CurrentItem);
-
-            
-
             grid.ResetBindings();
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-
-            if(MessageBox.Show(@"آیا از حذف شرکت مطمئن هستید؟",@"حذف شرکت/موسسه",
-                MessageBoxButtons.YesNo)==DialogResult.Yes)
-            {
-                unitOfWork.Companies.Remove(grid.CurrentItem);
-                unitOfWork.Complete();
-            }
-            grid.SetDataSource(unitOfWork.Companies.GetAll());
-        }
+        
     }
 }

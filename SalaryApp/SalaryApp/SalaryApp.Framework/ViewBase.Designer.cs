@@ -35,9 +35,9 @@
             // 
             this.ButtonsBar.BackColor = System.Drawing.Color.Gainsboro;
             this.ButtonsBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ButtonsBar.Location = new System.Drawing.Point(0, 276);
+            this.ButtonsBar.Location = new System.Drawing.Point(0, 283);
             this.ButtonsBar.Name = "ButtonsBar";
-            this.ButtonsBar.Size = new System.Drawing.Size(471, 50);
+            this.ButtonsBar.Size = new System.Drawing.Size(471, 43);
             this.ButtonsBar.TabIndex = 0;
             // 
             // ViewBase

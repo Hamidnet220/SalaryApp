@@ -9,8 +9,8 @@ namespace SalaryApp.WinClient.Views.Salary
     public partial class List : ViewBase
     {
         private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
-        private GridControl<Repositoris.Entities.Salary> _grid;
-        private Repositoris.Entities.Salary _salary;
+        private GridControl<Repositoris.Entities.Salary> grid;
+        private Repositoris.Entities.Salary salary;
 
         public List()
         {
@@ -20,21 +20,21 @@ namespace SalaryApp.WinClient.Views.Salary
 
         protected override void OnLoad(EventArgs e)
         {
-            _grid = new GridControl<Repositoris.Entities.Salary>(unitOfWork.Salaries.GetAll().ToList());
-            _salary = _grid.CurrentItem;
-            _grid.AddColumn("عنوان لیست", s => s.Title);
-            _grid.AddColumn("سال", s => s.Year);
-            _grid.AddColumn("ماه", s => s.Month);
-            _grid.AddColumn("تعداد پرسنل", s => s.EmployeesCount);
-            _grid.AddColumn("وضعیت", s => s.IsLocked);
-            this.Controls.Add(_grid);
-            _grid.BringToFront();
+            var salaryList = unitOfWork.Salaries.GetAll().ToList();
+            grid = new GridControl<Repositoris.Entities.Salary>(this);
+            salary = grid.CurrentItem;
+            grid.AddTextBoxColumn("عنوان لیست", s => s.Title);
+            grid.AddTextBoxColumn("سال", s => s.Year);
+            grid.AddTextBoxColumn("ماه", s => s.Month);
+            grid.AddTextBoxColumn("تعداد پرسنل", s => s.EmployeesCount);
+            grid.AddTextBoxColumn("وضعیت", s => s.IsLocked);
+            grid.SetDataSource(salaryList);
             base.OnLoad(e);
         }
 
         private void EmployeesList_Click(object sender, EventArgs e)
         {
-            var salarDetail=new SalaryDetails.List(_grid.CurrentItem);
+            var salarDetail=new SalaryDetails.List(grid.CurrentItem);
             salarDetail.Show();
         }
     }

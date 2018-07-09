@@ -14,3 +14,5 @@ D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framewor
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.Properties.Resources.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.ViewBase.resources
 D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\obj\Debug\SalaryApp.Framework.MainForm.resources
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\StructureMap.dll
+D:\Programing\C#\Project\Salary\SalaryApp\SalaryApp\SalaryApp\SalaryApp.Framework\bin\Debug\StructureMap.xml

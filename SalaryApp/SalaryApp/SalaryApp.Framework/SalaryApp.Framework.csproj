@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap, Version=4.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.6.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,9 +50,8 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ExperssionHandler.cs" />
-    <Compile Include="GridControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="GridControl.cs" />
+    <Compile Include="IOC\TypeRegistery.cs" />
     <Compile Include="MainFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +90,9 @@
       <Project>{0f3c1172-a45b-4bc1-b8ce-1243ebb976ee}</Project>
       <Name>SalaryApp.Repositoris</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,7 @@ using SalaryApp.WinClient.Views.Employees;
 
 namespace SalaryApp.WinClient.Views.Companies
 {
-    public partial class Editor : ViewBase
+    public partial class Editor :Framework.EntityEditor<Company>
     {
         protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
         private Company company;
@@ -20,7 +20,17 @@ namespace SalaryApp.WinClient.Views.Companies
         {
             this.company = company;
             InitializeComponent();
-            ViewTitle = @"ویرایش شرکت/موسسه";
+        }
+
+        public override string ViewTitle
+        {
+            get
+            {
+                if (Entity.Id == 0)
+                    return "تعریف شرکت/موسسه جدید";
+                return "ویرایش شرکت/موسسه";
+            }
+            
         }
 
         protected override void OnLoad(EventArgs e)

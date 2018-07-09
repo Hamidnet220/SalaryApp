@@ -12,7 +12,7 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
     public partial class List : ViewBase
     {
         private readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
-        private GridControl<Employee> _grid;
+        private GridControl<Employee> grid;
         private readonly Repositoris.Entities.Salary _currenMonthSalary;
         private IEnumerable<SalaryDetail> salaryDetails;
 
@@ -35,15 +35,14 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
             {
                 employees.Add(unitOfWork.Employees.Get(employee.Employee.Id));
             }
-            _grid = new GridControl<Employee>(employees);
-            _grid.AddColumn("نام", emp=>emp.FirstName);
-            _grid.AddColumn("نام خانوادگی", emp=>emp.LastName);
-            _grid.AddColumn("نام پدر", emp => emp.FatherName);
-            _grid.AddColumn("کد ملی", emp => emp.NationalCode);
-            _grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
-            _grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-            this.Controls.Add(_grid);
-            _grid.BringToFront();
+            grid = new GridControl<Employee>(this);
+            grid.AddTextBoxColumn("نام", emp=>emp.FirstName);
+            grid.AddTextBoxColumn("نام خانوادگی", emp=>emp.LastName);
+            grid.AddTextBoxColumn("نام پدر", emp => emp.FatherName);
+            grid.AddTextBoxColumn("کد ملی", emp => emp.NationalCode);
+            grid.AddTextBoxColumn("شماره شناسنامه", emp => emp.IdNumber);
+            grid.AddTextBoxColumn("شماره حساب", emp => emp.BankAccNumber1);
+            grid.SetDataSource(employees);
 
             base.OnLoad(e);
         }
@@ -51,18 +50,15 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
         private void AddEmployee_Click(object sender, EventArgs e)
         {
             var selectEmployeeView=new EmployeesList(_currenMonthSalary);
-            
-
-
         }
 
         private void DeleteEmployee_Click(object sender, EventArgs e)
         {
-            if (_grid.CurrentItem==null) return;
-            var currentItem= unitOfWork.SalaryDetails.Find(s=>s.Employee.Id==_grid.CurrentItem.Id).FirstOrDefault();
+            if (grid.CurrentItem==null) return;
+            var currentItem= unitOfWork.SalaryDetails.Find(s=>s.Employee.Id==grid.CurrentItem.Id).FirstOrDefault();
             unitOfWork.SalaryDetails.Remove(currentItem);
             unitOfWork.Complete();
-            _grid.RemoveCurrent();
+            grid.RemoveCurrent();
         }
     }
 }

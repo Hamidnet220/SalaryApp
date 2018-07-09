@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using SalarApp.Framework;
 using SalaryApp.Framework;
-using SalaryApp.Repositoris;
 using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
+using SalaryApp.Repositoris.Migrations;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
@@ -27,33 +23,32 @@ namespace SalaryApp.WinClient.Views.Employees
                 MessageBox.Show("مشتری جدید");
             });
 
+            AddAction("ویرایش", btn =>
+            {
+                ViewEngin.ViewInForm<Views.Employees.Editor>(null,true);
+            });
+
         }
 
         protected override void OnLoad(EventArgs e)
         {
             var employees = unitOfWork.Employees.GetAll().ToList();
-            foreach (var emp in employees)
-            {
-                if (!emp.BankName1Id.HasValue)
-                    continue;
-                var bank = unitOfWork.Banks.GetById(emp.BankName1Id.Value).FirstOrDefault();
-            }
+            grid = new GridControl<Employee>(this);
 
-            grid = new GridControl<Employee>(employees);
-            grid.AddColumn("نام", emp => emp.FirstName);
-            grid.AddColumn("نام خانوادگی", emp => emp.LastName);
-            grid.AddColumn("نام پدر", emp => emp.FatherName);
-            grid.AddColumn("کد ملی", emp => emp.NationalCode);
-            grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
-            grid.AddColumn("تاریخ تولد ", emp => emp.DOB);
-            grid.AddColumn("محل تولد", emp => emp.POI);
-            grid.AddColumn("تاریخ صدور", emp => emp.DOB);
-            grid.AddColumn("محل صدر", emp => emp.POI);
-            grid.AddColumn("شماره بیمه", emp => emp.IdNumber);
-            grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-            grid.AddColumn("تعداد فرزند", emp => emp.Children);
-            grid.AddColumn("وضعیت کار", emp => emp.IsWorking);
-            this.Controls.Add(grid);
+            grid.AddTextBoxColumn("نام", emp => emp.FirstName);
+            grid.AddTextBoxColumn("نام خانوادگی", emp => emp.LastName);
+            grid.AddTextBoxColumn("نام پدر", emp => emp.FatherName);
+            grid.AddTextBoxColumn("کد ملی", emp => emp.NationalCode);
+            grid.AddTextBoxColumn("شماره شناسنامه", emp => emp.IdNumber);
+            grid.AddTextBoxColumn("تاریخ تولد ", emp => emp.DOB);
+            grid.AddTextBoxColumn("محل تولد", emp => emp.POI);
+            grid.AddTextBoxColumn("تاریخ صدور", emp => emp.DOB);
+            grid.AddTextBoxColumn("محل صدر", emp => emp.POI);
+            grid.AddTextBoxColumn("شماره بیمه", emp => emp.IdNumber);
+            grid.AddTextBoxColumn("شماره حساب", emp => emp.BankAccNumber1);
+            grid.AddTextBoxColumn("تعداد فرزند", emp => emp.Children);
+            grid.AddTextBoxColumn("وضعیت کار", emp => emp.IsWorking);
+            grid.SetDataSource(employees);
             base.OnLoad(e);
         }
 
@@ -69,7 +64,7 @@ namespace SalaryApp.WinClient.Views.Employees
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            var employeeEditor=new Views.Employees.Editor(grid.CurrentItem);
+          
         }
 
 

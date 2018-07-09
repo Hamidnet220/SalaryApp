@@ -21,18 +21,18 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
         }
         protected override void OnLoad(EventArgs e)
         {
-            var employeeList = unitOfWork.Employees.GetAll();
+            var employees = unitOfWork.Employees.GetAll();
 
-            grid = new GridControl<Employee>(employeeList);
+            grid = new GridControl<Employee>(this);
             grid.AddCheckBox("وضعیت انتخاب");
-            grid.AddColumn("نام", emp => emp.FirstName);
-            grid.AddColumn("نام خانوادگی", emp => emp.LastName);
-            grid.AddColumn("نام پدر", emp => emp.FatherName);
-            grid.AddColumn("کد ملی", emp => emp.NationalCode);
-            grid.AddColumn("شماره شناسنامه", emp => emp.IdNumber);
-            grid.AddColumn("شماره حساب", emp => emp.BankAccNumber1);
-            this.Controls.Add(grid);
-            grid.BringToFront();
+            grid.AddTextBoxColumn("نام", emp => emp.FirstName);
+            grid.AddTextBoxColumn("نام خانوادگی", emp => emp.LastName);
+            grid.AddTextBoxColumn("نام پدر", emp => emp.FatherName);
+            grid.AddTextBoxColumn("کد ملی", emp => emp.NationalCode);
+            grid.AddTextBoxColumn("شماره شناسنامه", emp => emp.IdNumber);
+            grid.AddTextBoxColumn("شماره حساب", emp => emp.BankAccNumber1);
+            grid.SetDataSource(employees);
+
             base.OnLoad(e);
         }
 
@@ -40,15 +40,6 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
         private void AddEmployee_Click(object sender, EventArgs e)
         {
 
-            foreach (DataGridViewRow row in grid.SelectedRows)
-            {
-                unitOfWork.SalaryDetails.Add(new SalaryDetail
-                {
-                    SalaryId = salary.Id,
-                    Employee = (Employee)row.DataBoundItem
-                });
-            }
-            unitOfWork.Complete();
             
         }
     }
