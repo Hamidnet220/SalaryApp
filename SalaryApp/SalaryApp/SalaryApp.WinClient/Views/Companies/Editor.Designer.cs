@@ -42,7 +42,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(476, 17);
+            this.label1.Location = new System.Drawing.Point(541, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // TitleTextBox
             // 
             this.TitleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TitleTextBox.Location = new System.Drawing.Point(335, 33);
+            this.TitleTextBox.Location = new System.Drawing.Point(400, 33);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(175, 20);
             this.TitleTextBox.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(484, 56);
+            this.label2.Location = new System.Drawing.Point(549, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 0;
@@ -69,7 +69,7 @@
             // TelTextBox
             // 
             this.TelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TelTextBox.Location = new System.Drawing.Point(335, 72);
+            this.TelTextBox.Location = new System.Drawing.Point(400, 72);
             this.TelTextBox.Name = "TelTextBox";
             this.TelTextBox.Size = new System.Drawing.Size(175, 20);
             this.TelTextBox.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 95);
+            this.label3.Location = new System.Drawing.Point(546, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 0;
@@ -87,7 +87,7 @@
             // FaxTextBox
             // 
             this.FaxTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FaxTextBox.Location = new System.Drawing.Point(335, 111);
+            this.FaxTextBox.Location = new System.Drawing.Point(400, 111);
             this.FaxTextBox.Name = "FaxTextBox";
             this.FaxTextBox.Size = new System.Drawing.Size(175, 20);
             this.FaxTextBox.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(480, 134);
+            this.label4.Location = new System.Drawing.Point(545, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 0;
@@ -105,7 +105,7 @@
             // AddressTextBox
             // 
             this.AddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddressTextBox.Location = new System.Drawing.Point(265, 150);
+            this.AddressTextBox.Location = new System.Drawing.Point(330, 150);
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(245, 79);
@@ -124,7 +124,7 @@
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.label1);
             this.Name = "Editor";
-            this.Size = new System.Drawing.Size(557, 331);
+            this.Size = new System.Drawing.Size(622, 418);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.TitleTextBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);

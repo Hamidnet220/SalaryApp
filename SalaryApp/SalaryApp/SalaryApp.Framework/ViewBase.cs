@@ -15,7 +15,10 @@ namespace SalaryApp.Framework
         public ViewBase()
         {
             InitializeComponent();
+            
         }
+        
+        public DialogResult DialogResult { get; set; }
 
         public virtual string ViewTitle { get; set; }
 

@@ -17,12 +17,12 @@ namespace SalaryApp.WinClient
 
             baseInfoItem.AddMenu("اطلاعات شرکت ها", null, (obj, e) =>
             {
-                ViewEngin.ViewInForm<Views.Companies.List>(null,true);
+                ViewEngin.ViewInForm<Views.Companies.List>(null,true, FormWindowState.Maximized);
             });
 
             baseInfoItem.AddMenu("اطلاعات کارگاه ها", null, (obj, e) =>
             {
-                ViewEngin.ViewInForm<Views.Workplace.List>();
+                ViewEngin.ViewInForm<Views.Workplace.List>(null,true,FormWindowState.Maximized);
             });
 
             baseInfoItem.AddMenu("اطلاعات کارکنان", null, (obj, e) =>

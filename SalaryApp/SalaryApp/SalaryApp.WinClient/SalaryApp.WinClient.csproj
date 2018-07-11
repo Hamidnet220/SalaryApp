@@ -76,7 +76,6 @@
     <Compile Include="Views\Companies\Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
-    <Compile Include="BindingTools.cs" />
     <Compile Include="Views\Employees\Editor.cs">
       <SubType>UserControl</SubType>
     </Compile>

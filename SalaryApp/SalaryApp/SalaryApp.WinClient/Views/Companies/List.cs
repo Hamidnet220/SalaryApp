@@ -23,8 +23,7 @@ namespace SalaryApp.WinClient.Views.Companies
                     MessageBoxButtons.YesNo)!=DialogResult.Yes)
                     return;
 
-                var company = grid.CurrentItem;
-                company.IsDeleted = true;
+                grid.CurrentItem.IsDeleted = true;
                 unitOfWork.Complete();
                 grid.RemoveCurrent();
                 
@@ -32,15 +31,28 @@ namespace SalaryApp.WinClient.Views.Companies
 
             AddAction("ویرایش", btn =>
             {
-                ViewEngin.ViewInForm<Views.Companies.Editor>(editor =>
+               var view= ViewEngin.ViewInForm<Views.Companies.Editor>(editor =>
                 {
                     editor.Entity = grid.CurrentItem;
                 });
+
+                if (view.DialogResult == DialogResult.OK)
+                {
+                    unitOfWork.Complete();
+                    grid.ResetBindings();
+                }
             });
 
             AddAction("جدید", btn =>
             {
-                    ViewEngin.ViewInForm<Views.Companies.Editor>(null, true);
+                var view = ViewEngin.ViewInForm<Views.Companies.Editor>(null, true);
+                if (view.DialogResult == DialogResult.OK)
+                {
+                    unitOfWork.Companies.Add(view.Entity);
+                    unitOfWork.Complete();
+                    grid.ResetBindings();
+                }
+
             });
 
             AddAction("انصراف", btn =>
@@ -60,21 +72,12 @@ namespace SalaryApp.WinClient.Views.Companies
             grid.AddTextBoxColumn("شماره فکس", c => c.Fax);
 
             grid.SetDataSource(companies);
+
+            
             base.OnLoad(e);
         }
 
-        private void NewButton_Click(object sender, EventArgs e)
-        {
-            var companyEditor = new Editor(new Company());
-            grid.SetDataSource(unitOfWork.Companies.GetAll());
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            var companyEditor=new Editor(grid.CurrentItem);
-            grid.ResetBindings();
-        }
-
+       
         
     }
 }

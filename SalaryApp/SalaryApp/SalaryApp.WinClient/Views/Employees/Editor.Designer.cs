@@ -59,90 +59,90 @@
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstNameTextBox.Location = new System.Drawing.Point(621, 29);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(532, 27);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(120, 22);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(103, 20);
             this.FirstNameTextBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(723, 12);
+            this.label1.Location = new System.Drawing.Point(620, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 14);
+            this.label1.Size = new System.Drawing.Size(20, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "نام";
             // 
             // LastNameTextBox
             // 
             this.LastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastNameTextBox.Location = new System.Drawing.Point(621, 72);
+            this.LastNameTextBox.Location = new System.Drawing.Point(532, 67);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(120, 22);
+            this.LastNameTextBox.Size = new System.Drawing.Size(103, 20);
             this.LastNameTextBox.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(672, 55);
+            this.label2.Location = new System.Drawing.Point(576, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 14);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "نام خانوادگی";
             // 
             // FatherNameTextBox
             // 
             this.FatherNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FatherNameTextBox.Location = new System.Drawing.Point(621, 114);
+            this.FatherNameTextBox.Location = new System.Drawing.Point(532, 106);
             this.FatherNameTextBox.Name = "FatherNameTextBox";
-            this.FatherNameTextBox.Size = new System.Drawing.Size(120, 22);
+            this.FatherNameTextBox.Size = new System.Drawing.Size(103, 20);
             this.FatherNameTextBox.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(701, 97);
+            this.label3.Location = new System.Drawing.Point(601, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 14);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "نام پدر ";
             // 
             // NationalCodeTextBox
             // 
             this.NationalCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NationalCodeTextBox.Location = new System.Drawing.Point(621, 156);
+            this.NationalCodeTextBox.Location = new System.Drawing.Point(532, 145);
             this.NationalCodeTextBox.Name = "NationalCodeTextBox";
-            this.NationalCodeTextBox.Size = new System.Drawing.Size(120, 22);
+            this.NationalCodeTextBox.Size = new System.Drawing.Size(103, 20);
             this.NationalCodeTextBox.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(678, 139);
+            this.label4.Location = new System.Drawing.Point(581, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 14);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "شماره ملی";
             // 
             // IdNumberTextBox
             // 
             this.IdNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdNumberTextBox.Location = new System.Drawing.Point(621, 198);
+            this.IdNumberTextBox.Location = new System.Drawing.Point(532, 184);
             this.IdNumberTextBox.Name = "IdNumberTextBox";
-            this.IdNumberTextBox.Size = new System.Drawing.Size(120, 22);
+            this.IdNumberTextBox.Size = new System.Drawing.Size(103, 20);
             this.IdNumberTextBox.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(647, 181);
+            this.label5.Location = new System.Drawing.Point(555, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 14);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "شماره شناسنامه";
             // 
@@ -150,117 +150,120 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(500, 97);
+            this.label6.Location = new System.Drawing.Point(429, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 14);
+            this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "نام بانک";
             // 
             // Account1TextBox
             // 
             this.Account1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Account1TextBox.Location = new System.Drawing.Point(387, 156);
+            this.Account1TextBox.Location = new System.Drawing.Point(332, 145);
             this.Account1TextBox.Name = "Account1TextBox";
-            this.Account1TextBox.Size = new System.Drawing.Size(157, 22);
+            this.Account1TextBox.Size = new System.Drawing.Size(135, 20);
             this.Account1TextBox.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(468, 139);
+            this.label7.Location = new System.Drawing.Point(401, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 14);
+            this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "شماره حساب";
             // 
             // textBox8
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(424, 198);
+            this.textBox8.Location = new System.Drawing.Point(363, 184);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(120, 22);
+            this.textBox8.Size = new System.Drawing.Size(103, 20);
             this.textBox8.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(518, 181);
+            this.label8.Location = new System.Drawing.Point(444, 168);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 14);
+            this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "تلفن";
             // 
             // textBox9
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(424, 240);
+            this.textBox9.Location = new System.Drawing.Point(363, 223);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(120, 22);
+            this.textBox9.Size = new System.Drawing.Size(103, 20);
             this.textBox9.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(510, 223);
+            this.label9.Location = new System.Drawing.Point(437, 207);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 14);
+            this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 1;
             this.label9.Text = "موبایل";
             // 
             // BankNameComboBox
             // 
+            this.BankNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BankNameComboBox.FormattingEnabled = true;
-            this.BankNameComboBox.Location = new System.Drawing.Point(424, 114);
+            this.BankNameComboBox.Location = new System.Drawing.Point(363, 106);
             this.BankNameComboBox.Name = "BankNameComboBox";
-            this.BankNameComboBox.Size = new System.Drawing.Size(120, 22);
+            this.BankNameComboBox.Size = new System.Drawing.Size(103, 21);
             this.BankNameComboBox.TabIndex = 2;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(488, 55);
+            this.label10.Location = new System.Drawing.Point(418, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 14);
+            this.label10.Size = new System.Drawing.Size(54, 13);
             this.label10.TabIndex = 1;
             this.label10.Text = "محل صدور";
             // 
             // POIComboBox
             // 
+            this.POIComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.POIComboBox.FormattingEnabled = true;
-            this.POIComboBox.Location = new System.Drawing.Point(424, 72);
+            this.POIComboBox.Location = new System.Drawing.Point(363, 67);
             this.POIComboBox.Name = "POIComboBox";
-            this.POIComboBox.Size = new System.Drawing.Size(120, 22);
+            this.POIComboBox.Size = new System.Drawing.Size(103, 21);
             this.POIComboBox.TabIndex = 2;
             // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(495, 12);
+            this.label11.Location = new System.Drawing.Point(424, 11);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 14);
+            this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 1;
             this.label11.Text = "محل تولد";
             // 
             // POBComboBox
             // 
+            this.POBComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.POBComboBox.FormattingEnabled = true;
-            this.POBComboBox.Location = new System.Drawing.Point(424, 29);
+            this.POBComboBox.Location = new System.Drawing.Point(363, 27);
             this.POBComboBox.Name = "POBComboBox";
-            this.POBComboBox.Size = new System.Drawing.Size(120, 22);
+            this.POBComboBox.Size = new System.Drawing.Size(103, 21);
             this.POBComboBox.TabIndex = 2;
             // 
             // label13
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(709, 265);
+            this.label13.Location = new System.Drawing.Point(608, 246);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 14);
+            this.label13.Size = new System.Drawing.Size(34, 13);
             this.label13.TabIndex = 1;
             this.label13.Text = "کشور";
             // 
@@ -268,35 +271,34 @@
             // 
             this.CountryComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CountryComboBox.FormattingEnabled = true;
-            this.CountryComboBox.Location = new System.Drawing.Point(622, 282);
+            this.CountryComboBox.Location = new System.Drawing.Point(533, 262);
             this.CountryComboBox.Name = "CountryComboBox";
-            this.CountryComboBox.Size = new System.Drawing.Size(120, 22);
+            this.CountryComboBox.Size = new System.Drawing.Size(103, 21);
             this.CountryComboBox.TabIndex = 2;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(693, 223);
+            this.label12.Location = new System.Drawing.Point(594, 207);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 14);
+            this.label12.Size = new System.Drawing.Size(53, 13);
             this.label12.TabIndex = 1;
             this.label12.Text = "تاریخ تولد";
             // 
             // DateOfBorn
             // 
             this.DateOfBorn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateOfBorn.Location = new System.Drawing.Point(622, 240);
+            this.DateOfBorn.Location = new System.Drawing.Point(533, 223);
             this.DateOfBorn.Mask = "____/__/__";
             this.DateOfBorn.Name = "DateOfBorn";
-            this.DateOfBorn.Size = new System.Drawing.Size(119, 22);
+            this.DateOfBorn.Size = new System.Drawing.Size(103, 20);
             this.DateOfBorn.TabIndex = 3;
             // 
             // Editor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 430);
             this.Controls.Add(this.DateOfBorn);
             this.Controls.Add(this.CountryComboBox);
             this.Controls.Add(this.POBComboBox);
@@ -324,7 +326,33 @@
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Name = "Editor";
-            this.Text = "EmployeeEditor";
+            this.Size = new System.Drawing.Size(645, 430);
+            this.Controls.SetChildIndex(this.FirstNameTextBox, 0);
+            this.Controls.SetChildIndex(this.LastNameTextBox, 0);
+            this.Controls.SetChildIndex(this.FatherNameTextBox, 0);
+            this.Controls.SetChildIndex(this.NationalCodeTextBox, 0);
+            this.Controls.SetChildIndex(this.IdNumberTextBox, 0);
+            this.Controls.SetChildIndex(this.Account1TextBox, 0);
+            this.Controls.SetChildIndex(this.textBox8, 0);
+            this.Controls.SetChildIndex(this.textBox9, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
+            this.Controls.SetChildIndex(this.label13, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.BankNameComboBox, 0);
+            this.Controls.SetChildIndex(this.POIComboBox, 0);
+            this.Controls.SetChildIndex(this.POBComboBox, 0);
+            this.Controls.SetChildIndex(this.CountryComboBox, 0);
+            this.Controls.SetChildIndex(this.DateOfBorn, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

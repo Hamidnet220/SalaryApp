@@ -18,14 +18,21 @@ namespace SalaryApp.WinClient.Views.Employees
         {
             InitializeComponent();
             this.ViewTitle = "لیست پرسنل";
+
             AddAction("پرسنل جدید", btn =>
             {
-                MessageBox.Show("مشتری جدید");
+                ViewEngin.ViewInForm<Views.Employees.Editor>(null,true);
             });
 
             AddAction("ویرایش", btn =>
             {
-                ViewEngin.ViewInForm<Views.Employees.Editor>(null,true);
+                var view=ViewEngin.ViewInForm<Views.Employees.Editor>(editor =>editor.Entity = grid.CurrentItem, true);
+                if (view.DialogResult == DialogResult.OK)
+                {
+                    unitOfWork.Complete();
+                    grid.ResetBindings();
+                }
+
             });
 
         }
@@ -62,10 +69,7 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.RemoveCurrent();
         }
 
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-          
-        }
+       
 
 
     }

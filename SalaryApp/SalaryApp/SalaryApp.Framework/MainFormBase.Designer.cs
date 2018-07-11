@@ -82,10 +82,10 @@
             this.CloseCurrentTab.AutoSize = true;
             this.CloseCurrentTab.Location = new System.Drawing.Point(5, 28);
             this.CloseCurrentTab.Name = "CloseCurrentTab";
-            this.CloseCurrentTab.Size = new System.Drawing.Size(13, 13);
+            this.CloseCurrentTab.Size = new System.Drawing.Size(34, 13);
             this.CloseCurrentTab.TabIndex = 0;
             this.CloseCurrentTab.TabStop = true;
-            this.CloseCurrentTab.Text = "X";
+            this.CloseCurrentTab.Text = "بستن";
             this.CloseCurrentTab.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CloseCurrentTab_LinkClicked);
             // 
             // MainForm

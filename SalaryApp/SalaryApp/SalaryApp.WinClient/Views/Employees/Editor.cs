@@ -1,79 +1,73 @@
 ﻿using System;
 using System.Linq;
-using System.Windows.Forms;
 using SalaryApp.Framework;
 using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
-    public partial class Editor : ViewBase
+    public partial class Editor : EntityEditor<Employee>
     {
-        private readonly Employee employee;
         protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
-        public Editor(Employee employee)
+        public Editor()
         {
             InitializeComponent();
-
-            AddAction("صرفنظر", btn =>
-            {
-                CloseView(DialogResult.OK);
-            });
-
-            AddAction("تایید", btn =>
-            {
-                CloseView(DialogResult.Cancel);
-            });
-
-
         }
 
 
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    var bindingTools = new BindingTools<Employee>(employee);
+        protected override void OnLoad(EventArgs e)
+        {
 
-        //    bindingTools.BindTextBox(FirstNameTextBox, emp => emp.FirstName);
-        //    bindingTools.BindTextBox(LastNameTextBox, emp => emp.LastName);
-        //    bindingTools.BindTextBox(FatherNameTextBox, emp => emp.FatherName);
-        //    bindingTools.BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
-        //    bindingTools.BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
-        //    bindingTools.BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
-        //    bindingTools.BindMaskTextBox(DateOfBorn, emp => emp.DOB);
+            BindTextBox(FirstNameTextBox, emp => emp.FirstName);
+            BindTextBox(LastNameTextBox, emp => emp.LastName);
+            BindTextBox(FatherNameTextBox, emp => emp.FatherName);
+            BindTextBox(NationalCodeTextBox, emp => emp.NationalCode);
+            BindTextBox(IdNumberTextBox, emp => emp.IdNumber);
+            BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
+            BindMaskTextBox(DateOfBorn, emp => emp.DOB);
 
-        //    bindingTools.BindComboBox<int?, Bank, Employee>(BankNameComboBox,
-        //        unitOfWork.Banks.GetAll().ToList(),
-        //        "نام بانک ",
-        //        b => b.Title,
-        //        b => b.Id,
-        //        employee.BankName1Id);
+            BindComboBox(BankNameComboBox,
+                emp => emp.BankName1Id,
+                "نام بانک ",
+                unitOfWork.Banks.GetAll().ToList(),
+                b => b.Title,
+                b => b.Id);
 
-        //    bindingTools.BindComboBox<int?, City, Employee>(POBComboBox,
-        //        unitOfWork.Cities.GetAll().ToList(),
-        //        "محل تولد",
-        //        c => c.CityName,
-        //        c => c.Id,
-        //        employee.POB);
+            BindComboBox(POBComboBox,
+                emp => emp.POB,
+                "محل تولد",
+                unitOfWork.Cities.GetAll().ToList(),
+                c => c.CityName,
+                c => c.Id);
 
-        //    bindingTools.BindComboBox<int?, City, Employee>(POIComboBox,
-        //        unitOfWork.Cities.GetAll().ToList(),
-        //        "محل صدور",
-        //        c => c.CityName,
-        //        c => c.Id,
-        //        employee.POI);
+            BindComboBox(POIComboBox,
+                emp => emp.POI,
+                "محل صدور",
+                unitOfWork.Cities.GetAll().ToList(),
+                c => c.CityName,
+                c => c.Id);
 
-        //    bindingTools.BindComboBox<int?, Country, Employee>(CountryComboBox,
-        //        unitOfWork.Countries.GetAll().ToList(),
-        //        "نام کشور",
-        //        c => c.Title,
-        //        c => c.Id,
-        //        employee.POI);
+            BindComboBox(CountryComboBox,
+                emp => emp.CountryId,
+                "نام کشور",
+                unitOfWork.Countries.GetAll().ToList(),
+                c => c.Title,
+                c => c.Id);
 
 
-        //    base.OnLoad(e);
-        //}
 
-        public override string ViewTitle  => "ویرایش مشتری";
+            base.OnLoad(e);
+        }
+
+        public override string ViewTitle
+        {
+            get
+            {
+                if (Entity.Id == 0)
+                    return "ایجاد پرسنل جدید";
+                return "ویرایش پرسنل";
+            }
+        }
     }
 }

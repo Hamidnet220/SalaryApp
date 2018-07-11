@@ -44,7 +44,8 @@ namespace SalaryApp.Framework
             return (T)viewInstance;
         }
 
-        public T ViewInForm<T>(Action<T> initialazer=null, bool displayAsDialog=false) where T : ViewBase
+        public T ViewInForm<T>(Action<T> initialazer=null, bool displayAsDialog=false
+            , FormWindowState windowState = FormWindowState.Normal) where T : ViewBase
         {
 
             var typeRegistery = new TypeRegistery();
@@ -73,6 +74,7 @@ namespace SalaryApp.Framework
             {
                 openForms.Remove(viewInstance.ViewIdentifier);
             };
+            form.WindowState = windowState;
             openForms.Add(viewInstance.ViewIdentifier,form);
             if (displayAsDialog)
                 form.ShowDialog();
@@ -104,6 +106,7 @@ namespace SalaryApp.Framework
                 if (dialogResult.HasValue)
                 {
                     openForms[viewBase.ViewIdentifier].DialogResult = dialogResult.Value;
+                    viewBase.DialogResult = dialogResult.Value;
                     if (!openForms[viewBase.ViewIdentifier].Modal)
                     {
                         openForms[viewBase.ViewIdentifier].Close();
