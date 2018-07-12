@@ -40,7 +40,12 @@ namespace SalaryApp.WinClient
 
             salaryMenu.AddMenu("لیست های حقوق", null, (obj, e) =>
             {
-                var view = new Views.Salary.List();
+                ViewEngin.ViewInForm<Views.Salary.List>(null, true, FormWindowState.Maximized);
+            });
+
+            salaryMenu.AddMenu("لیست های حضور وغیاب", null, (obj, e) =>
+            {
+                ViewEngin.ViewInForm<Views.Attendance.List>(null, true, FormWindowState.Maximized);
             });
 
 

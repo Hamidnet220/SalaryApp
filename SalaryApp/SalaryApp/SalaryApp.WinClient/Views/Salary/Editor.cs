@@ -10,6 +10,8 @@ namespace SalaryApp.WinClient.Views.Salary
         {
             this.salary = salary;
             ViewTitle = @"ویرایش حقوق";
+
+           
         }
 
         protected override void OnLoad(EventArgs e)

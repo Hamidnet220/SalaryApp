@@ -18,10 +18,6 @@ namespace SalaryApp.WinClient
         [STAThread]
         static void Main()
         {
-            using (var un=new UnitOfWork(new SalaryAppContext()))
-            {
-                var emps = un.Employees.GetAll();
-            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

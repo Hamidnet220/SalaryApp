@@ -45,7 +45,7 @@ namespace SalaryApp.Framework
         }
 
         public T ViewInForm<T>(Action<T> initialazer=null, bool displayAsDialog=false
-            , FormWindowState windowState = FormWindowState.Normal) where T : ViewBase
+            , FormWindowState windowState = FormWindowState.Normal,bool topButtonBar=false) where T : ViewBase
         {
 
             var typeRegistery = new TypeRegistery();
@@ -61,6 +61,9 @@ namespace SalaryApp.Framework
                 currentForm.Activate();
                 return (T)currentForm.Controls.OfType<ViewBase>().First();
             }
+            
+            viewInstance.VisibleTopBar = topButtonBar;
+
             var form = new Form();
             form.Height = 600;
             form.Width = 800;
@@ -74,6 +77,7 @@ namespace SalaryApp.Framework
             {
                 openForms.Remove(viewInstance.ViewIdentifier);
             };
+                
             form.WindowState = windowState;
             openForms.Add(viewInstance.ViewIdentifier,form);
             if (displayAsDialog)

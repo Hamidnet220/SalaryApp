@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using SalaryApp.Framework;
 using SalaryApp.Repositoris.DataLayer;
 using SalaryApp.Repositoris.Entities;
-using SalaryApp.Repositoris.Migrations;
 
 namespace SalaryApp.WinClient.Views.Employees
 {
@@ -21,7 +20,13 @@ namespace SalaryApp.WinClient.Views.Employees
 
             AddAction("پرسنل جدید", btn =>
             {
-                ViewEngin.ViewInForm<Views.Employees.Editor>(null,true);
+                var view=ViewEngin.ViewInForm<Views.Employees.Editor>(null,true);
+                if (view.DialogResult == DialogResult.OK)
+                {
+                    unitOfWork.Employees.Add(view.Entity);
+                    unitOfWork.Complete();
+                    grid.AddItem(view.Entity);
+                }
             });
 
             AddAction("ویرایش", btn =>
@@ -31,6 +36,22 @@ namespace SalaryApp.WinClient.Views.Employees
                 {
                     unitOfWork.Complete();
                     grid.ResetBindings();
+                }
+
+            });
+
+
+            AddAction("حذف", btn =>
+            {
+                
+                
+                    
+                if (MessageBox.Show(@"شما در حال حذف اطلاعات هویتی پرسنل انتخاب شده هستید.آیا مطمئن هستید؟",
+                        "هشدار",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    grid.CurrentItem.IsDeleted = true;
+                    unitOfWork.Complete();
+                    grid.RemoveCurrent();
                 }
 
             });
@@ -56,18 +77,12 @@ namespace SalaryApp.WinClient.Views.Employees
             grid.AddTextBoxColumn("تعداد فرزند", emp => emp.Children);
             grid.AddTextBoxColumn("وضعیت کار", emp => emp.IsWorking);
             grid.SetDataSource(employees);
+            
             base.OnLoad(e);
         }
 
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("آیا مطمئن هستید؟", "هشدار", MessageBoxButtons.YesNo) != DialogResult.Yes)
-                return;
-            unitOfWork.Employees.Remove(grid.CurrentItem);
-            unitOfWork.Complete();
-            grid.RemoveCurrent();
-        }
+       
 
        
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using SalarApp.Framework;
-using StructureMap.Diagnostics.TreeView;
 
 namespace SalaryApp.Framework
 {
@@ -16,6 +15,7 @@ namespace SalaryApp.Framework
         {
             grid=new DataGridView();
             container.Controls.Add(grid);
+            grid.BringToFront();
 
             grid.Dock = DockStyle.Fill;
             grid.AllowUserToAddRows = false;
@@ -24,7 +24,6 @@ namespace SalaryApp.Framework
             grid.AutoGenerateColumns = false;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
         }
 
 
@@ -51,6 +50,7 @@ namespace SalaryApp.Framework
             return this;
         }
 
+
         public GridControl<TModel> AddCheckBox(string columnName)
         {
             var checkBox = new DataGridViewCheckBoxColumn
@@ -66,6 +66,12 @@ namespace SalaryApp.Framework
         public void ResetBindings()
         {
             bindigSource?.ResetBindings(true);
+        }
+
+        public void AddItem(TModel item)
+        {
+            bindigSource.Add(item);
+            ResetBindings();
         }
 
         public TModel CurrentItem

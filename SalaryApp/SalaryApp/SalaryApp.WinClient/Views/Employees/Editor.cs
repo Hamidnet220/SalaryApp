@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SalaryApp.Framework;
 using SalaryApp.Repositoris.DataLayer;
@@ -10,11 +11,15 @@ namespace SalaryApp.WinClient.Views.Employees
     {
         protected readonly UnitOfWork unitOfWork = new UnitOfWork(new SalaryAppContext());
 
+        private List<City> cities;
+        private List<Bank> banks;
+        private List<Country> countries;
         public Editor()
         {
             InitializeComponent();
         }
 
+       
 
         protected override void OnLoad(EventArgs e)
         {
@@ -27,35 +32,17 @@ namespace SalaryApp.WinClient.Views.Employees
             BindTextBox(Account1TextBox, emp => emp.BankAccNumber1);
             BindMaskTextBox(DateOfBorn, emp => emp.DOB);
 
-            BindComboBox(BankNameComboBox,
-                emp => emp.BankName1Id,
-                "نام بانک ",
-                unitOfWork.Banks.GetAll().ToList(),
-                b => b.Title,
-                b => b.Id);
+            BindComboBox(BankNameComboBox,emp => emp.BankName1Id,"نام بانک ",
+                unitOfWork.Banks.GetAll().ToList(),b => b.Title,b => b.Id);
 
-            BindComboBox(POBComboBox,
-                emp => emp.POB,
-                "محل تولد",
-                unitOfWork.Cities.GetAll().ToList(),
-                c => c.CityName,
-                c => c.Id);
+            BindComboBox(POBComboBox,emp => emp.POB,"محل تولد",
+                unitOfWork.Cities.GetAll().ToList(),c => c.CityName,c => c.Id);
 
-            BindComboBox(POIComboBox,
-                emp => emp.POI,
-                "محل صدور",
-                unitOfWork.Cities.GetAll().ToList(),
-                c => c.CityName,
-                c => c.Id);
+            BindComboBox(POIComboBox,emp =>emp.POI,"محل صدور",
+                unitOfWork.Cities.GetAll().ToList(),c => c.CityName,c => c.Id);
 
-            BindComboBox(CountryComboBox,
-                emp => emp.CountryId,
-                "نام کشور",
-                unitOfWork.Countries.GetAll().ToList(),
-                c => c.Title,
-                c => c.Id);
-
-
+            BindComboBox(CountryComboBox,emp => emp.CountryId,
+                "نام کشور",unitOfWork.Countries.GetAll().ToList(),c => c.Title,c => c.Id);
 
             base.OnLoad(e);
         }

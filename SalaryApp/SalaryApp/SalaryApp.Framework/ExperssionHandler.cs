@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Net.Http.Headers;
 
 namespace SalarApp.Framework
 {

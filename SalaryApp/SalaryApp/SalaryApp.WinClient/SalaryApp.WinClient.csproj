@@ -64,6 +64,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Attendance\Editor.cs" />
+    <Compile Include="Views\Attendance\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Views\Companies\List.cs">
       <SubType>UserControl</SubType>
     </Compile>

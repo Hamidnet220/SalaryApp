@@ -23,8 +23,13 @@ namespace SalaryApp.WinClient.Views.SalaryDetails
             InitializeComponent();
 
             this.ViewTitle = "لیست پرسنل ماه جاری";
-
             this._currenMonthSalary = currentMonthSalary;
+
+            AddTopAction("اضافه کردن", null);
+            AddTopAction("ویرایش", null);
+            AddTopAction("حذف", null);
+            AddTopAction("محاسبه حقوق", null);
+            AddTopAction("محاسبه حقوق همه", null);
         }
 
         protected override void OnLoad(EventArgs e)

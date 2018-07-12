@@ -15,9 +15,20 @@ namespace SalaryApp.Framework
         public ViewBase()
         {
             InitializeComponent();
-            
+
         }
-        
+
+        protected override void OnLoad(EventArgs e)
+        {
+            if (VisibleTopBar)
+            {
+                TopButtonsBar.Visible = true;
+                TopButtonsBar.BringToFront();
+            }
+            base.OnLoad(e);
+        }
+
+        public bool VisibleTopBar { get; set; }
         public DialogResult DialogResult { get; set; }
 
         public virtual string ViewTitle { get; set; }
@@ -34,18 +45,47 @@ namespace SalaryApp.Framework
             internal set;
         }
 
-        protected Button AddAction(string title, Action<Button> onClick)
+        protected Button AddTopAction(string title, Action<Button> onClick, bool mutliline = false)
+        {
+            var button = new Button();
+            button.Anchor=AnchorStyles.Top|AnchorStyles.Right;
+            button.Text = title;
+
+            button.Click += (obj, e) =>
+            {
+                onClick(button);
+            };
+            var totalButton = TopButtonsBar.Controls.Count;
+            var left =TopButtonsBar.Width-( ((totalButton + 1) * 10) + ((totalButton+1) * 90));
+            button.Location = new Point(left, 10);
+
+            if (mutliline)
+                button.Size = new Size(90, 50);
+            else
+                button.Size = new Size(90, 23);
+
+            TopButtonsBar.Controls.Add(button);
+            return button;
+        }
+
+        protected Button AddAction(string title, Action<Button> onClick,bool mutliline=false)
         {
             var button=new Button();
+            
             button.Text = title;
             button.Click += (obj, e) =>
             {
                 onClick(button);
             };
             var totalButton = ButtonsBar.Controls.Count;
-            var left = ((totalButton + 1) * 5) + (totalButton*85);
+            var left = ((totalButton + 1) * 10) + (totalButton*85);
             button.Location=new Point(left, 7);
-            button.Size=new Size(85,23);
+            
+            if(mutliline)
+                button.Size=new Size(90,50);
+            else
+                button.Size = new Size(90, 23);
+
             ButtonsBar.Controls.Add(button);
             return button;
         }

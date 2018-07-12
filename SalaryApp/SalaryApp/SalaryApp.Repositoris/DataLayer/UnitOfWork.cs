@@ -16,6 +16,7 @@ namespace SalaryApp.Repositoris.DataLayer
         public IWorkplaceRepository Workplaces { get; }
         public ISalaryRepository Salaries { get; }
         public ISalaryDetailsRepository SalaryDetails { get; }
+        public IAttendanceRepository Attendances { get; }
 
         public UnitOfWork(SalaryAppContext context)
         {
@@ -29,6 +30,8 @@ namespace SalaryApp.Repositoris.DataLayer
             Workplaces=new WorkplaceRepository(_context);
             Salaries=new SalaryRepository(_context);
             SalaryDetails=new SalaryDitailsRepository(_context);
+            Attendances=new AttendanceRepository(_context);
+            
             
         }
 
